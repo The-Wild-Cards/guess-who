@@ -11,7 +11,7 @@ export const characterArray = [{
     fourEyes:false,
     spots:false,
     nose:true,
-    ears:false
+    ears:true
 }, {
     id:'violet',
     name:'Violet',
@@ -195,7 +195,7 @@ export const characterArray = [{
     threeEyes:false,
     fourEyes:true,
     spots:false,
-    nose:false,
+    nose:true,
     ears:false
 }, {
     id:'hakem',
@@ -222,9 +222,9 @@ export const characterArray = [{
     twoEyes:false,
     threeEyes:false,
     fourEyes:false,
-    spots:false,
+    spots:true,
     nose:false,
-    ears:false
+    ears:true
 }, {
     id:'albert',
     name:'Albert',
