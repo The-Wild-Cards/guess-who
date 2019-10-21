@@ -45,6 +45,11 @@ export function correctFace() {
     const correctFace = Math.floor(Math.random() * characterArray.length);
     return characterArray[correctFace];
 }
+let guess = 0;
+
+const userGuess = document.getElementById('user-guess');
+const guessedFace = userGuess.value;
+
 export function compareFace(guessedFace, correctFace.id) {
     if (guessedFace === correctFace) { 
         window.location = '../results-page/index.html';
@@ -53,4 +58,3 @@ export function compareFace(guessedFace, correctFace.id) {
         guess++;
     }
 }
-
