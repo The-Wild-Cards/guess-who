@@ -41,3 +41,7 @@ export function renderTableRow(userName, wins, losses) {
 
     return tr;
 }
+export function correctFace() {
+    const correctFace = Math.floor(Math.random() * characterArray.length);
+    return characterArray[correctFace];
+}
