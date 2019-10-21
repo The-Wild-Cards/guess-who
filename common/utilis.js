@@ -45,7 +45,7 @@ export function correctFace() {
     const correctFace = Math.floor(Math.random() * characterArray.length);
     return characterArray[correctFace];
 }
-export function compareFace(guessedFace, correctFace) {
+export function compareFace(guessedFace.id, correctFace.id) {
     if (guessedFace === correctFace) { 
         window.location = '../results-page/index.html';
     } else {
