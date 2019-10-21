@@ -35,10 +35,10 @@ FEATURES (MVP unless otherwise specified)
 6. provide user feedback after each guess (combine with #7?)
 7. strings are generated based on past guesses/answers and form a list
 8. user can guess a specific character to try to finish the gamre
-9. keep track of remaining guesses
+9. keep track of remaining guesses (out of total)
 10. end game if guesses run out OR user guesses correct face
 11. generate results page based on win/lose (STRETCH -- special feedback phrases based on winning especially early, etc.)
-12. generate all-time high scores table with username and number of guesses
+12. generate all-time all-time stats table with username and wins/losses
 13. if user asks the same question twice...? (STRETCH -- do something different with duplicate guesses)
     - MVP: just allow it to be asked twice
     - STRETCH: remove option
