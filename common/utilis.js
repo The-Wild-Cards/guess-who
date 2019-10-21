@@ -45,3 +45,11 @@ export function correctFace() {
     const correctFace = Math.floor(Math.random() * characterArray.length);
     return characterArray[correctFace];
 }
+export function compareFace(guessedFace, correctFace) {
+    if (guessedFace === correctFace) { 
+        window.location = '../results-page/index.html';
+    } else {
+        alert('Your as wrong as Pyrrhus was about Rome');
+        guess++;
+    }
+}
