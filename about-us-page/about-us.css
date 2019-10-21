@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    justify-content: center;
+    background-color: lightgoldenrodyellow;
+}
+
+.contain {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 500px;
+margin-left: auto;
+margin-right: auto;
+    justify-content: center;
+}
+
+.alien{
+    padding: 30px;
+}
+
+.image {
+    border: solid 3px black;
+}
+
+.name {
+    border: solid 3px black;
+    border-radius: 30px;
+    background-color: wheat;
+    padding-left: 10px;
+    padding-right: 10px;
+}
