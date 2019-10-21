@@ -29,12 +29,12 @@ FEATURES (MVP unless otherwise specified)
 
 1. save user name and show on game page
 2. computer randomly generates/chooses "correct" face
-3. dynamically generate grid of faces (random = STRETCH) 
+3. dynamically generate grid of faces (random = STRETCH)
 4. array of faces with ids and matching descriptive phrases
 5. faces flip over/disappear when clicked (and can be reversed)
 6. provide user feedback after each guess (combine with #7?)
 7. strings are generated based on past guesses/answers and form a list
-8. user can guess a specific character to try to finish the gamre
+8. user can guess a specific character to try to finish the game
 9. keep track of remaining guesses (out of total)
 10. end game if guesses run out OR user guesses correct face
 11. generate results page based on win/lose (STRETCH -- special feedback phrases based on winning especially early, etc.)

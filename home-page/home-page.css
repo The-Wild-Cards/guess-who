@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    align-content: center;
+    background-color: wheat;
+
+}
+ul{
+    list-style-type: none;
+}
+
+.game-rule{
+text-align: justify;
+height: 300px;
+width: 600px;
+margin-left: auto;
+margin-right: auto;
+
+
+}
+
+.play-button {
+    border: solid 2px black;
+    border-radius: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lightgreen;
+}
+
+h1{
+    
+    /* font-family: 'Baloo Bhai', cursive; */
+    /* font-family: 'Righteous', cursive; */
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+    color: black;
+};
+
+h2{
+    font-family: 'Righteous', cursive;
+}
+h3{
+    font-family: 'Patua One', cursive;
+};
