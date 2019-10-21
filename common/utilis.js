@@ -17,3 +17,27 @@ export function getUser() {
     const user = JSON.parse(getJsonUser);
     return user;
 }
+export function renderTableRow(userName, wins, losses) {
+    const tr = document.createElement('tr');
+
+    const nameCell = document.createElement('td');
+    nameCell.className = 'align-left';
+    nameCell.name = userName;
+    tr.appendChild(nameCell);
+
+    const winCell = document.createElement('td');
+    winCell.textContent = wins;
+    tr.appendChild(winCell);
+
+    const lossesCell = document.createElement('td');
+    lossesCell.textContent = losses;
+    tr.appendChild(lossesCell);
+
+    const percentageCell = document.createElement('td');
+    percentageCell.className = 'win-loss-percentage';
+    const total = wins / losses;
+    percentageCell.textContent = total;
+    tr.appendChild(percentageCell);
+
+    return tr;
+}
