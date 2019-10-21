@@ -21,6 +21,7 @@ PAGES
     - display photo "It was ___!"
     - audio/effect based on how well user did (STRETCH)
     - 'play again' button
+    - about us button
 
 4. about us page
 
@@ -37,9 +38,11 @@ FEATURES (MVP unless otherwise specified)
 9. keep track of remaining guesses
 10. end game if guesses run out OR user guesses correct face
 11. generate results page based on win/lose (STRETCH -- special feedback phrases based on winning especially early, etc.)
-12. if user asks the same question twice...? (STRETCH -- do something different with duplicate guesses)
+12. generate all-time high scores table with username and number of guesses
+13. if user asks the same question twice...? (STRETCH -- do something different with duplicate guesses)
     - MVP: just allow it to be asked twice
     - STRETCH: remove option
+14. STRETCH -- actually play against the computer    
 
 GENERAL NOTES
 
