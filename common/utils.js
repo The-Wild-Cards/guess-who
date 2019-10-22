@@ -47,8 +47,7 @@ export function correctFace(characterArray) {
     return characterArray[correctFace];
 }
 
-const userGuess = document.getElementById('user-guess');
-const guessedFace = userGuess.value;
+
 
 export function compareFace(guessedFace, correctFaceId) {
     if (guessedFace === correctFaceId) {
