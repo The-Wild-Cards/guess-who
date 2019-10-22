@@ -4,6 +4,16 @@
 
 body {
     background-color: lightgoldenrodyellow;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    align-content: center;
 }
 
 h1 {
@@ -25,36 +35,33 @@ p {
     height: 180px;
     width: 140px;
     border: 1px dashed black;
-    margin: 1% 46%;
 }
 
 #leaderboard {
     height: 300px;
-    width: 600px;
+    width: 500px;
     border: 1px solid black;
-    margin: 1% 34%;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+
 }
 
 button {
     font-size: 20px;
     width: 200px;
     height: 50px;
-    margin-top: 1%;
     border-radius: 15px;
     border: 2px solid black;
     background-color: goldenrod;
     outline: none;
 }
 
-#play-again {
-    margin-left: 38.5%;
-    margin-right: 10px;
+.button {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#about-us {
-    margin-right: 38.5%; 
-    margin-left: 10px;
-}
 
 button:hover {
     cursor: pointer;
