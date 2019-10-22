@@ -1,11 +1,11 @@
 import { characterArray } from '../common/character-data.js'
 import { correctFace } from '../common/utils.js';
-import { notifyResults } from './results.js';
 import { compareQuestionFeature } from '../common/utils.js';
 
-
 const computerCharacter = correctFace(characterArray);
-
+const questionFeedbackSpan = document.getElementById('question-feedback');
+const guessAmountSpan = document.getElementById('guess-amount');
+let guessAmountRemaining = 5;
 
 
 
@@ -18,22 +18,23 @@ flipButtons.forEach(btn => {
     });
 });
 
-const everyQuestionOption = document.querySelectorAll('.features');
+const everyQuestionOption = document.querySelectorAll('.feature');
 
 everyQuestionOption.forEach((questionOption) => {
-    questionOption.addEventListener('click', (event) => {
+    questionOption.addEventListener('click', () => {
+        guessAmountRemaining--;
+        guessAmountSpan.textContent = guessAmountRemaining;
+        if (guessAmountRemaining < 1) {
+            window.location('./result-page/index.html');
+        }
         compareQuestionFeature(questionOption, computerCharacter);
+        if (compareQuestionFeature === true) {
+            questionFeedbackSpan.textContent = questionOption.yesMessage;
+        } else questionFeedbackSpan.textContent = questionOption.noMessage;
+
+
     });
 });
-
-// const generateFeedback = () => {
-//     const ul = document.createElement('ul');
-//     resultsSection.appendChild(ul);
-//     resultsArray.forEach(result => {
-//         const li = makeResultLine(result);
-//         ul.appendChild(li);
-//     });
-// };
 
 
 
