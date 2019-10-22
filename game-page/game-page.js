@@ -22,6 +22,7 @@ flipButtons.forEach(btn => {
         btn.classList.add('overlay3');
     });
 });
+
 const everyQuestionOption = document.querySelectorAll('.feature');
 
 everyQuestionOption.forEach((questionOption) => {
@@ -45,7 +46,4 @@ userGuessSubmitButton.addEventListener('click', () => {
 featureArray.forEach((item) => {
     const radioButton = pickFeature(item);
     navagtion.appendChild(radioButton);
-    console.log(radioButton);
 });
-
-    
