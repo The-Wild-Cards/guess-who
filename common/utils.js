@@ -42,6 +42,7 @@ export function renderTableRow(userName, wins, losses) {
 
     return tr;
 }
+
 export function correctFace(characterArray) {
     const correctFace = Math.floor(Math.random() * characterArray.length);
     return characterArray[correctFace];
@@ -90,3 +91,27 @@ export const compareQuestionFeature = (questionOption, computerCharacter) => {
         return true;
     } else return false;
 };
+
+//export function correctFace() {
+//    const correctFace = Math.floor(Math.random() * characterArray.length);
+//    return characterArray[correctFace];
+//}
+//let guess = 0;
+
+//const userGuess = document.getElementById('user-guess');
+//const guessedFace = userGuess.value;
+
+//export function compareFace(guessedFace, correctFace.id) {
+//    if (guessedFace === correctFace) { 
+//        window.location = '../results-page/index.html';
+//    } else {
+//        alert('Your as wrong as Pyrrhus was about Rome');
+//        guess++;
+//    }
+//}
+export function createUser(formData) {
+    const user = {
+        name: formData.get('name'),
+    };
+    return user;
+}
