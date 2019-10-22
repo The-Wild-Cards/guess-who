@@ -7,15 +7,7 @@ flipButtons.forEach(btn => {
         btn.classList.add('overlay3');
     });
 });
-
 featureArray.forEach((item) => {
     const radioButton = pickFeature(item);
     navagtion.appendChild(radioButton);
-    console.log(radioButton);
 });
-// for (let index = 0; index < featureArray.length; index++) {
-//     const feature = featureArray[index];
-//     console.log(feature);
-//     const featureDOM = pickFeature(feature);
-//     feature.appendChild(featureDOM);
-// }
