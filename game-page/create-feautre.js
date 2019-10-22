@@ -9,10 +9,6 @@ export function pickFeature(object) {
     radio.value = object.id;
     label.textContent = object.description;
     label.appendChild(radio);
-    
-    // const description = document.createElement;
-    // description.textContent = object.description;
-    // label.appendChild(description);
     return label;
 }
 
