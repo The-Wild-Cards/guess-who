@@ -66,3 +66,20 @@ img {
 .overlay2 {
   grid-area: 1 / 1;
 }
+#navigation {
+  
+  background: white;
+}
+/* .user-pick {
+    border: 5px solid hsla(0, 0%, 16%, 0.91);
+    border-radius: 100%;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+}
+input:checked + .user-pick {
+    border: 5px solid   hsla(0, 0%, 16%, 0.91);
+    box-shadow: 8px 8px 8px hsla(249, 100%, 14%, 1)
+}
+input:checked:hover + .user-pick {
+    box-shadow: 8px 8px 8px hsla(249, 100%, 14%, 1)
+} */
