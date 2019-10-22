@@ -42,7 +42,7 @@ export function renderTableRow(userName, wins, losses) {
 
     return tr;
 }
-export function correctFace() {
+export function correctFace(characterArray) {
     const correctFace = Math.floor(Math.random() * characterArray.length);
     return characterArray[correctFace];
 }
@@ -52,10 +52,50 @@ const userGuess = document.getElementById('user-guess');
 const guessedFace = userGuess.value;
 
 export function compareFace(guessedFace, correctFace.id) {
-    if (guessedFace === correctFace) { 
+    if (guessedFace === correctFace) {
         window.location = '../results-page/index.html';
     } else {
         alert('Your as wrong as Pyrrhus was about Rome');
         guess++;
     }
 }
+export const compareQuestionFeature = (questionOption, computerCharacter) => {
+    if (questionOption.id = 'horns' && computerCharacter.horns === true) {
+        return true;
+    }
+    if (questionOption.id = 'hat' && computerCharacter.hat === true) {
+        return true;
+    }
+    if (questionOption.id = 'hair' && computerCharacter.hair === true) {
+        return true;
+    }
+    if (questionOption.id = 'fin' && computerCharacter.fin === true) {
+        return true;
+    }
+    if (questionOption.id = 'oneEye' && computerCharacter.oneEye === true) {
+        return true;
+    }
+    if (questionOption.id = 'twoEyes' && computerCharacter.twoEyes === true) {
+        return true;
+    }
+    if (questionOption.id = 'threeEyes' && computerCharacter.threeEyes === true) {
+        return true;
+    }
+    if (questionOption.id = 'fourEyes' && computerCharacter.hat === true) {
+        return true;
+    }
+    if (questionOption.id = 'spots' && computerCharacter.spots === true) {
+        return true;
+    }
+    if (questionOption.id = 'nose' && computerCharacter.nose === true) {
+        return true;
+    }
+    if (questionOption.id = 'ears' && computerCharacter.ears === true) {
+        return true;
+    } else return false;
+}
+
+// export const getRandomCharacter = (array) => {
+//     const randomCharacterIndex = Math.floor(Math.random() * array.length);
+//     return array[randomCharacterIndex];
+// }
