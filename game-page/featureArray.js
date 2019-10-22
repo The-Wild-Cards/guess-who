@@ -1,0 +1,34 @@
+export const featureArray = [{
+    id: 'nose',
+    description: `Nose`
+}, {
+    id: 'horns',
+    description: `Horns`
+}, {
+    id: 'hat',
+    description: `Hat`
+}, {
+    id: 'hair',
+    description: `Hair`
+}, {
+    id: 'fin',
+    description: `Fin`
+}, {
+    id: 'oneEye',
+    description: `One-Eye`
+}, {
+    id: 'twoEye',
+    description: `Two-Eyes`
+}, {
+    id: 'threeEye',
+    description: `Three-Eyes`
+}, {
+    id: 'fourEyes',
+    description: `Four-Eyes`
+}, {
+    id: 'spots',
+    description: `Spots`
+}, {
+    id: 'ears',
+    description: `Ears`
+}];
