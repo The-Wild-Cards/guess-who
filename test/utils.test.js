@@ -2,8 +2,9 @@
 // import example from '../src/example.js';
 import { findById, renderTableRow } from '../common/utils.js';
 
+
 const test = QUnit.test;
-test('testing that findById finds character by Id', function (assert) {
+test('testing that findById finds character by Id', function(assert) {
     const mockData = [{
         id: 'walter',
         name: 'Walter',

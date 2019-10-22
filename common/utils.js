@@ -1,3 +1,4 @@
+import { characterArray } from '../common/character-data.js';
 export function findById(characterArray, id) {
     for (let i = 0; i < characterArray.length; i++) {
         const character = characterArray[i];
@@ -41,10 +42,10 @@ export function renderTableRow(userName, wins, losses) {
 
     return tr;
 }
-//export function correctFace() {
-//    const correctFace = Math.floor(Math.random() * characterArray.length);
-//    return characterArray[correctFace];
-//}
+export function correctFace() {
+    const correctFace = Math.floor(Math.random() * characterArray.length);
+    return characterArray[correctFace];
+}
 //let guess = 0;
 
 //const userGuess = document.getElementById('user-guess');
