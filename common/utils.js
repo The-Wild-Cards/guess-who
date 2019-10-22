@@ -1,9 +1,8 @@
-//added comment to push
 export function findById(characterArray, id) {
     for (let i = 0; i < characterArray.length; i++) {
-        const characterArray = characterArray[i];
-        if (characterArray.id === id) {
-            return characterArray;
+        const character = characterArray[i];
+        if (character.id === id) { 
+            return character;
         }
     }
 }
