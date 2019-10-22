@@ -30,7 +30,7 @@ FEATURES (MVP unless otherwise specified)
 1. save user name and show on game page
 2. computer randomly generates/chooses "correct" face
 3. dynamically generate grid of faces (random = STRETCH)
-4. array of faces with ids and matching descriptive phrases
+4. array of faces with ids and matching descriptive phrases - Matt
 5. faces flip over/disappear when clicked (and can be reversed)
 6. provide user feedback after each guess (combine with #7?)
 7. strings are generated based on past guesses/answers and form a list
