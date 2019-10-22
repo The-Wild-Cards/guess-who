@@ -42,6 +42,7 @@ export function renderTableRow(userName, wins, losses) {
 
     return tr;
 }
+
 export function correctFace() {
     const correctFace = Math.floor(Math.random() * characterArray.length);
     return characterArray[correctFace];
@@ -51,3 +52,11 @@ export function compareFace(guessedFace, correctFaceId) {
         window.location = '../results-page/index.html';
     } 
 }
+
+export function createUser(formData) {
+    const user = {
+        name: formData.get('name'),
+    };
+    return user;
+}
+
