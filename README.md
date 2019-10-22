@@ -10,7 +10,8 @@ Names of the team members:
     -Brittany Houtz
 
 A description of the project
-    -The classic Guess Who board game is now online, we took the approach to help encourage learning, specifically ESL (English Second Language) people. 
+    -The classic Guess Who board game is now online, we took the approach to help encourage learning, specifically ESL (English Second Language) people. The game is a guessing game, where the user will need to guess what the computer generated, will need to ask questions such as: do they have hair or do they have a hat?
+    After process of elimination hopefully the user can guess under the limited guesses we have given them. 
 
 
 The overall problem domain and how the project solves those problems
