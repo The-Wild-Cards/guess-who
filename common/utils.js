@@ -1,3 +1,7 @@
+export function correctFace(characterArray) {
+    const correctFace = Math.floor(Math.random() * characterArray.length);
+    return characterArray[correctFace];
+}
 export function findById(characterArray, id) {
     for (let i = 0; i < characterArray.length; i++) {
         const character = characterArray[i];
@@ -41,29 +45,6 @@ export function renderTableRow(userName, wins, losses) {
 
     return tr;
 }
-export function correctFace() {
-    const correctFace = Math.floor(Math.random() * characterArray.length);
-    return characterArray[correctFace];
-}
-let guess = 0;
-
-const userGuess = document.getElementById('user-guess');
-const guessedFace = userGuess.value;
-
-export function compareFace(guessedFace, id) {
-    if (guessedFace === id) { 
-        window.location = '../results-page/index.html';
-    } else {
-        alert('Your as wrong as Pyrrhus was about Rome');
-        guess++;
-    }
-
-export function correctFace(characterArray) {
-    const correctFace = Math.floor(Math.random() * characterArray.length);
-    return characterArray[correctFace];
-}
-
-
 
 export function compareFace(guessedFace, correctFaceId) {
     if (guessedFace === correctFaceId) {
@@ -106,23 +87,6 @@ export const compareQuestionFeature = (questionOption, computerCharacter) => {
         return true;
     } else return false;
 };
-
-//export function correctFace() {
-//    const correctFace = Math.floor(Math.random() * characterArray.length);
-//    return characterArray[correctFace];
-//}
-//let guess = 0;
-
-export function correctFace() {
-    const correctFace = Math.floor(Math.random() * characterArray.length);
-    return characterArray[correctFace];
-}
-export function compareFace(guessedFace, correctFaceId) {
-    if (guessedFace === correctFaceId) { 
-        window.location = '../results-page/index.html';
-    } 
-
-}
 
 export function createUser(formData) {
     const user = {

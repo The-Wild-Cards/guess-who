@@ -1,5 +1,5 @@
 
-import { characterArray } from '../common/character-data.js'
+import { characterArray } from '../common/character-data.js';
 import { correctFace } from '../common/utils.js';
 import { compareQuestionFeature } from '../common/utils.js';
 import { compareFace } from '../common/utils.js';
