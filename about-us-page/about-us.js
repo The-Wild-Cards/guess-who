@@ -1,7 +1,6 @@
-const replayButton = document.getElementById('about-us-button');
+const homeButton = document.getElementById('HomeButton');
 
-replayButton.addEventListener('click', () => {
-    window.location = '../index.html';
+homeButton.addEventListener('click', () => {
+    window.location = '../home-page/index.html';
 });
-
 

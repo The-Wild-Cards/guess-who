@@ -5,15 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="common/reset.css">
-    <link rel="stylesheet" href="./common/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./home-page/home-page.css">
-    <title>Document</title>
+   <title>Guess Who</title>
 </head>
-
 <body>
+    <div class="container">
+    <nav>
+ <header>Guess Who?</header>
+</nav>
+<form id="user-creation">
+<label>
+<input id="name" name="name" placeholder="Your Name" type="text" required>
+</label>
+</form>
+<div id="board">
+<label>
+    <input name="game" value="alien" type="radio">
+    <img src="./assets/about-us/alienBoard.png" class="game-board">
+</label>
+<label>
+    <input name="game" value="people" type="radio">
+    <img src="./assets/about-us/alienBoard.png" class="game-board">
+</label>
+</div>
+<section>
+    <h4>Game rules:</h4>
+Begin by picking from the descriptions at the top. Example with the Aliens, click the "Hat?" to see if they are wearing
+a hat. If we say, “yes,” you flip over all of the characters without a hat. If we say, “no,” you flip over the
+characters that have a hat. Through the process of elimination, you will eventually be able to “guess” the name of the
+character. Keep in mind these are yes or no questions and you only have a set amount of guesses. If your guesses run out
+before you enter in the correct name, you lose. If you enter the wrong name you will lose a guess. If you enter the
+right name before your guesses run out you win! See the leader board to compare your results against other players!
+</section>
+    </div>
 
-    <script type="module" src="home-page/home-page.js"></script>
+    <script type="module" src="./home-page/home-page.js"></script>
 </body>
 
 </html>
