@@ -6,7 +6,7 @@ import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
 import { createFeature } from './create-feature.js';
 
-const highlighted = document.querySelectorAll('.container');
+// const highlighted = document.querySelectorAll('.container');
 const computerCharacter = correctFace(characterArray);
 const questionFeedbackSpan = document.getElementById('question-feedback');
 const guessAmountSpan = document.getElementById('guess-amount');

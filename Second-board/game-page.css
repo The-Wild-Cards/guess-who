@@ -130,10 +130,12 @@ img {
   font-size: 0.3em;
   height: 150px;
   width: 150px;
+  background: white;
   border-radius: 5px;
   border: 5px solid hsla(300, 100%, 35%, 1);
   border-top: 20px solid hsla(300, 100%, 35%, 1);
-  text-align: space-evenly;
+ 
+ 
   transition: all 3s ease;
 }
 .highlight {
