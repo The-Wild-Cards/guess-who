@@ -13,7 +13,6 @@ const guessAmountSpan = document.getElementById('guess-amount');
 let guessAmountRemaining = 10;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
-const guessedFace = userGuessText.value.toLowerCase();
 
 //input text field with button that has even handler and take value of text field
 const flipButtons = document.querySelectorAll('.overlay');
