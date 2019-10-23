@@ -22,7 +22,7 @@ form {
 header {
     color: hsla(25, 100%, 28%, 1);
     font-size: 2.7rem;
-    text-shadow: 4px 4px 5px hsla(0, 0%, 13%, 1);
+    text-shadow: 4px 4px 5px black;
     padding-bottom: 10px;
 }
 img {
@@ -90,6 +90,11 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: baseline;
+    color: hsla(25, 100%, 28%, 1);
+    text-shadow: 2px 2px 3px black;
+    font-size: 1.5rem;
+}
+section {
     padding: 5px 30px 10px 30px;
 }
 
