@@ -1,12 +1,10 @@
-import { getUser, loadProfile } from '../common/utils.js';
+import { loadProfile, getComputerCharacter } from '../common/utils.js';
 
-
+//gets user's name
 loadProfile(); 
-//gets users name
-const user = getUser();
 
-
-
-
+const computerCharacterImage = document.getElementById('correct-face');
+const characterId = getComputerCharacter();
+computerCharacterImage.src = ('../assets/faces/' + characterId + '.png');
 
 
