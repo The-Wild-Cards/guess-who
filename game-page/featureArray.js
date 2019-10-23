@@ -8,7 +8,7 @@ export const featureArray = [{
 }, {
     id: 'horns',
     description: `Horns?`,
-    yesMessage: `This alien does have horns! Nice ${user.name}!`,
+    yesMessage: `This alien does have horns! Nice guess ${user.name}!`,
     noMessage: `${user.name}, there are no horns.`
 }, {
     id: 'hat',
@@ -23,18 +23,18 @@ export const featureArray = [{
 }, {
     id: 'fin',
     description: ` Fin? `,
-    yesMessage: `Yes ${user.name} this alien can probably swim with its fin.`,
-    noMessage: `This alien hates water, cuz he can't swim with no fin.`
+    yesMessage: `Yes ${user.name}, this alien can probably swim with its fin.`,
+    noMessage: `This alien hates water, cuz they can't swim with no fin.`
 }, {
     id: 'oneEye',
     description: `One Eye?`,
-    yesMessage: `They might only have one-eye, but they can see your into your soul ${user.name}.`,
+    yesMessage: `They might only have one-eye, but they can see into your soul ${user.name}.`,
     noMessage: `${user.name}, this is not one of those freaky 1 eye aliens!`
 }, {
     id: 'twoEyes',
     description: `2-Eyes?`,
     yesMessage: `${user.name}, this alien could pass for human since they have 2 eyes!`,
-    noMessage: `${user.name}, this alien has less or more eyes! It must be scary looking.`
+    noMessage: `${user.name}, this alien has more or less than 2 eyes! It must be scary looking.`
 }, {
     id: 'threeEyes',
     description: `Three Eyes?`,
@@ -43,7 +43,7 @@ export const featureArray = [{
 }, {
     id: 'fourEyes',
     description: `Four Eyes?`,
-    yesMessage: `${user.name}, this creepy-cute alien does have 4 eyes!`,
+    yesMessage: `${user.name}, this cute alien does have 4 eyes!`,
     noMessage: `${user.name}, this alien has less than four eyes.`
 }, {
     id: 'spots',
