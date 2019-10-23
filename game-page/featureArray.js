@@ -31,12 +31,12 @@ export const featureArray = [{
     yesMessage: `They might only have one-eye, but they can see your into your soul ${user}.`,
     noMessage: `Click the highlighted alien's ${user}, this is not one of those freaky 1 eye aliens!`
 }, {
-    id: 'twoEye',
+    id: 'twoEyes',
     description: `2-Eyes?`,
     yesMessage: `${user}, this alien could pass for human since they have 2 eyes!`,
     noMessage: `${user}, this alien has less or more eyes! It must be scary looking, click the hightlighted alien's.`
 }, {
-    id: 'threeEye',
+    id: 'threeEyes',
     description: `Three Eyes?`,
     yesMessage: `${user}, have you ever seen a three eye alien? You will...`,
     noMessage: `Click the highlighted alien's this one has less or more than 3 eyes.`

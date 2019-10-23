@@ -45,7 +45,6 @@ everyQuestionOption.forEach((questionOption) => {
         if (guessAmountRemaining < 1) {
             window.location = '../result-page/index.html';
         }
-        
         const foundFeatureObject = findById(featureArray, questionOption.value);
         if (compareQuestionFeature(questionOption.value, computerCharacter)) {
             questionFeedbackSpan.textContent = foundFeatureObject.yesMessage;
