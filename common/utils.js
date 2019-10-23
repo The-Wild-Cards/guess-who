@@ -1,9 +1,12 @@
-//added comment to push
+export function correctFace(characterArray) {
+    const correctFace = Math.floor(Math.random() * characterArray.length);
+    return characterArray[correctFace];
+}
 export function findById(characterArray, id) {
     for (let i = 0; i < characterArray.length; i++) {
-        const characterArray = characterArray[i];
-        if (characterArray.id === id) {
-            return characterArray;
+        const character = characterArray[i];
+        if (character.id === id) { 
+            return character;
         }
     }
 }
@@ -42,12 +45,75 @@ export function renderTableRow(userName, wins, losses) {
 
     return tr;
 }
-export function correctFace(characterArray) {
-    const correctFace = Math.floor(Math.random() * characterArray.length);
-    return characterArray[correctFace];
-}
+
 export function compareFace(guessedFace, correctFaceId) {
-    if (guessedFace === correctFaceId) { 
+    if (guessedFace === correctFaceId) {
         window.location = '../results-page/index.html';
     } 
+    
 }
+export const compareQuestionFeature = (questionOptionValue, computerCharacter) => {
+    if (questionOptionValue === 'horns' && computerCharacter.horns === true) {
+        return true;
+    }
+    if (questionOptionValue === 'hat' && computerCharacter.hat === true) {
+        return true;
+    }
+    if (questionOptionValue === 'hair' && computerCharacter.hair === true) {
+        return true;
+    }
+    if (questionOptionValue === 'fin' && computerCharacter.fin === true) {
+        return true;
+    }
+    if (questionOptionValue === 'oneEye' && computerCharacter.oneEye === true) {
+        return true;
+    }
+    if (questionOptionValue === 'twoEyes' && computerCharacter.twoEyes === true) {
+        return true;
+    }
+    if (questionOptionValue === 'threeEyes' && computerCharacter.threeEyes === true) {
+        return true;
+    }
+    if (questionOptionValue === 'fourEyes' && computerCharacter.fourEyes === true) {
+        return true;
+    }
+    if (questionOptionValue === 'spots' && computerCharacter.spots === true) {
+        return true;
+    }
+    if (questionOptionValue === 'nose' && computerCharacter.nose === true) {
+        return true;
+    }
+    if (questionOptionValue === 'ears' && computerCharacter.ears === true) {
+        return true;
+    } else return false;
+};
+
+export function createUser(formData) {
+    const user = {
+        name: formData.get('name'),
+    };
+    return user;
+}
+
+
+export function loadProfile() {
+    const name = document.getElementById('name');
+    const user = getUser();
+    if (!user) {
+        window.location = './';
+    }
+    name.textContent = user.name;
+}
+
+export function saveComputerCharacter(computer) {
+    const json = JSON.stringify(computer);
+    localStorage.setItem('computer-character', json);
+}
+
+export function getComputerCharacter() {
+    const getJsonFace = localStorage.getItem('computer-character');
+    if (!getJsonFace) return null;
+    const computerFace = JSON.parse(getJsonFace);
+    return computerFace;
+}
+
