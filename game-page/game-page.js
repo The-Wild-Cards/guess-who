@@ -5,8 +5,7 @@ import { compareQuestionFeature } from '../common/utils.js';
 import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
 import { createFeature } from './create-feature.js';
-
-
+import { loadProfile } from '../common/utils.js';
 
 // const highlighted = document.querySelectorAll('.container');
 const computerCharacter = correctFace(characterArray);
@@ -70,3 +69,4 @@ userGuessSubmitButton.addEventListener('click', () => {
     } 
 
 });
+loadProfile(); 
