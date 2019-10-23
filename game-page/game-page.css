@@ -31,7 +31,7 @@ input[type=radio]:hover {
     color: goldenrod;
 }
 input[type=text] {
-   background: linear-gradient(to right, goldenrod, white);
+   background: linear-gradient(to right, goldenrod, white, goldenrod);
 }
 nav {
   width: 100%;
