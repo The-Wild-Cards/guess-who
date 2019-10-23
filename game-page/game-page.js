@@ -15,7 +15,6 @@ const guessAmountSpan = document.getElementById('guess-amount');
 let guessAmountRemaining = 10;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
-const guessedFace = userGuessText.value.toLowerCase();
 
 saveComputerCharacter(computerCharacter);
 
