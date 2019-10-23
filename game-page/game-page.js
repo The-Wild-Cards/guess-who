@@ -6,7 +6,7 @@ import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
 import { createFeature } from './create-feature.js';
 
-
+// const highlighted = document.querySelectorAll('.container');
 const computerCharacter = correctFace(characterArray);
 const questionFeedbackSpan = document.getElementById('question-feedback');
 const guessAmountSpan = document.getElementById('guess-amount');
@@ -19,7 +19,7 @@ const guessedFace = userGuessText.value.toLowerCase();
 const flipButtons = document.querySelectorAll('.overlay');
 const navagtion = document.getElementById('navigation');
 flipButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function() {
         btn.classList.add('overlay3');
     });
 });
@@ -36,17 +36,18 @@ console.log(everyQuestionOption);
 console.log(computerCharacter);
 everyQuestionOption.forEach((questionOption) => {
     questionOption.addEventListener('click', () => {
+       
         guessAmountRemaining--;
         guessAmountSpan.textContent = guessAmountRemaining;
         if (guessAmountRemaining < 1) {
             window.location('./result-page/index.html');
         }
         const foundFeatureObject = findById(featureArray, questionOption.value);
-        
         if (compareQuestionFeature(questionOption.value, computerCharacter)) {
             questionFeedbackSpan.textContent = foundFeatureObject.yesMessage;
-
         } else questionFeedbackSpan.textContent = foundFeatureObject.noMessage;
+        //highlighted.classList.add('highlight');
+       
     });
 });
 
