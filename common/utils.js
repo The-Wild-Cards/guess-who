@@ -91,6 +91,8 @@ export const compareQuestionFeature = (questionOptionValue, computerCharacter) =
 export function createUser(formData) {
     const user = {
         name: formData.get('name'),
+        wins:0,
+        losses:0,
     };
     return user;
 }

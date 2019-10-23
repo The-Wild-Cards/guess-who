@@ -19,7 +19,7 @@ const guessedFace = userGuessText.value.toLowerCase();
 const flipButtons = document.querySelectorAll('.overlay');
 const navagtion = document.getElementById('navigation');
 flipButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function() {
         btn.classList.add('overlay3');
     });
 });
