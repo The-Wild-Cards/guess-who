@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   background: hsla(199, 100%, 25%, 1);
+   font-family: 'Righteous', cursive sans-serif;
 }
 #outputs {
   text-align: center;
