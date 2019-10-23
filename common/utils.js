@@ -107,8 +107,8 @@ export function loadProfile() {
     name.textContent = user.name;
 }
 
-export function saveComputerCharacter(computer) {
-    const json = JSON.stringify(computer);
+export function saveComputerCharacter(computerCharacter) {
+    const json = JSON.stringify(computerCharacter);
     localStorage.setItem('computer-character', json);
 }
 
@@ -116,6 +116,6 @@ export function getComputerCharacter() {
     const getJsonFace = localStorage.getItem('computer-character');
     if (!getJsonFace) return null;
     const computerFace = JSON.parse(getJsonFace);
-    return computerFace;
+    return computerFace.id;
 }
 

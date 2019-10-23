@@ -1,10 +1,12 @@
 
 import { characterArray } from '../common/character-data.js';
-import { correctFace, findById, getUser } from '../common/utils.js';
+import { correctFace, findById, saveComputerCharacter, getUser } from '../common/utils.js';
 import { compareQuestionFeature } from '../common/utils.js';
 import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
 import { createFeature } from './create-feature.js';
+
+
 
 // const highlighted = document.querySelectorAll('.container');
 const computerCharacter = correctFace(characterArray);
@@ -14,6 +16,10 @@ let guessAmountRemaining = 10;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
 const user = getUser();
+
+saveComputerCharacter(computerCharacter);
+
+//input text field with button that has even handler and take value of text field
 const flipButtons = document.querySelectorAll('.overlay');
 const navagtion = document.getElementById('navigation');
 const everyQuestionOption = document.querySelectorAll('.option');
