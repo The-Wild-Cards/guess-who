@@ -1,5 +1,3 @@
-
-
 const flipButtons = document.querySelectorAll('.overlay');
 
 flipButtons.forEach(btn => {

@@ -1,6 +1,6 @@
 
 import { characterArray } from '../common/character-data.js';
-import { correctFace, findById, saveComputerCharacter } from '../common/utils.js';
+import { correctFace, findById, saveComputerCharacter, saveResults } from '../common/utils.js';
 import { compareQuestionFeature } from '../common/utils.js';
 import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
@@ -56,12 +56,17 @@ everyQuestionOption.forEach((questionOption) => {
 userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = guessAmountRemaining;
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
+        const win = 'You Win';
+        saveResults(win);
         window.location = '../result-page/index.html';
-        return 'win';
+      
+    
     } else guessAmountRemaining--;
     guessAmountSpan.textContent = guessAmountRemaining;
     if (guessAmountRemaining < 1) {
+        const lost = 'You Lose';
+        saveResults(lost);
         window.location = '../result-page/index.html';
-        return 'loses';
     } 
+
 });

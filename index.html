@@ -5,42 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Acme|Baloo+Bhai|Modak|Patua+One|Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="common/reset.css">
-    <link rel="stylesheet" href="./common/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./home-page/home-page.css">
    <title>Guess Who</title>
 </head>
-
 <body>
-    <div class="box">
-    <h1>Guess Who</h1>
-
+    <div class="container">
+    <nav>
+ <header>Guess Who?</header>
+</nav>
 <form id="user-creation">
 <label>
-<h3>What's your Name:</h3>
-<input id="name" name="name" type="text" required>
+<input id="name" name="name" placeholder="Your Name" type="text" required>
 </label>
-<br>
-<br>
-
-<h2>Game rules:</h2>
-<div class="game-rule">
-
-<ul>
-<li>The Player takes their game board of 24 faces and places one of 24 mystery cards in the empty frame in each game board. This card represents the character your opponent has to guess and the character you have to answer questions about.</li>
-<br>
-<li>Begin by asking the other player a characteristic found on on one of their 24 visible characters. Example: “ Does your character have brown hair?”</li>
-<li>If they say, “yes,” the asking player flips over all of the characters without brown hair. </li>
-<li>If they say, “no,” the asking player flips over the characters that have brown hair. </li>
-<li>Through the process of elimination, players will eventually be able to “guess” the name of the opponents character.</li>
-<br>
-<li>Each player gets one yes or no question per turn and may only guess (to win the game) once per game. If a player successfully guesses their opponents hidden character then they win; if their guess is wrong then they lose.</li>
-</ul>
-</div>
-<button class="play-button">Play</button>
 </form>
+<div id="board">
+<label>
+    <input name="game" value="alien" type="radio">
+    <img src="./assets/about-us/alienBoard.png" class="game-board">
+</label>
+<label>
+    <input name="game" value="people" type="radio">
+    <img src="./assets/about-us/alienBoard.png" class="game-board">
+</label>
 </div>
+<section>
+    <h4>Game rules:</h4>
+Begin by picking from the descriptions at the top. Example with the Aliens, click the "Hat?" to see if they are wearing
+a hat. If we say, “yes,” you flip over all of the characters without a hat. If we say, “no,” you flip over the
+characters that have a hat. Through the process of elimination, you will eventually be able to “guess” the name of the
+character. Keep in mind these are yes or no questions and you only have a set amount of guesses. If your guesses run out
+before you enter in the correct name, you lose. If you enter the wrong name you will lose a guess. If you enter the
+right name before your guesses run out you win! See the leader board to compare your results against other players!
+</section>
+    </div>
+
     <script type="module" src="./home-page/home-page.js"></script>
 </body>
 
