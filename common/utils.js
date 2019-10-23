@@ -10,9 +10,27 @@ export function findById(characterArray, id) {
         }
     }
 }
+export const saveUserArray = (userArray) => {
+    const jsonUserArray = JSON.stringify(userArray);
+    localStorage.setItem('user-array', jsonUserArray);
+};
 export function saveUser(user) {
     const jsonUser = JSON.stringify(user);
     localStorage.setItem('user', jsonUser);
+}
+export const findUserByName = (userArray, userName) => {
+    for (let i = 0; i < userArray.length; i++) {
+        const user = userArray[i];
+        if (user.name === userName) { 
+            return user;
+        }
+    }
+};
+export function getUserArray() {
+    const getJsonUserArray = localStorage.getItem('user-array');
+    if (!getJsonUserArray) return null;
+    const userArray = JSON.parse(getJsonUserArray);
+    return userArray;
 }
 
 export function getUser() {

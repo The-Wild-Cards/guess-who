@@ -9,27 +9,43 @@
     <link rel="stylesheet" href="result-page.css">
     <title>Results</title>
 </head>
-<header><h1>Guess Who?</h1></header>
+<header>
+    <h1>Guess Who?</h1>
+</header>
+
 <body>
-<div class="container">
-<h3>Hello, <span id="name"></span></h3>
+    <div class="container">
+        <h3>Hello, <span id="name"></span></h3>
 
-<h3>You</h3><span id="win-or-lose"></span>
+        <h3>You</h3><span id="win-or-lose"></span>
 
 
-    <p>The correct character was...</p>
-    <img id="correct-face" src="">
-    <br>
-<div class="leaderboard">
-    <h3>Leaderboard:</h3>
-    <ul id="leaderboard"></ul>
-</div>
-<a href="../game-page/index.html"><button id="play-again">Play Again</button>
-    <br>
-    <br>
-    <a href="../about-us-page/index.html"><button id="about-us">About Us</button></a>
+        <p>The correct character was...</p>
+        <img id="correct-face" src="">
+        <br>
+        <div class="leaderboard">
+            <h3>Leaderboard:</h3>
 
-</div>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th class="align-left">User</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win/Loss%</th>
+                    </tr>
+                </thead>
+                <tbody>
+        
+                </tbody>
+
+        </div>
+        <a href="../game-page/index.html"><button id="play-again">Play Again</button>
+            <br>
+            <br>
+            <a href="../about-us-page/index.html"><button id="about-us">About Us</button></a>
+
+    </div>
 
 
     <script type="module" src="result-page.js"></script>

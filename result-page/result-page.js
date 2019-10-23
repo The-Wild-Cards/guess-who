@@ -1,42 +1,31 @@
-import { loadProfile, getComputerCharacter, findById } from '../common/utils.js';
-import { renderTableRow } from './render-table-row.js';
+import { loadProfile, getComputerCharacter, renderTableRow } from '../common/utils.js';
 
-//gets user's name
+
+const USER_LIST_KEY = 'user-array';
 loadProfile(); 
 
 const computerCharacterImage = document.getElementById('correct-face');
 const characterId = getComputerCharacter();
 computerCharacterImage.src = ('../assets/faces/' + characterId + '.png');
+const javascriptReadableUserList = JSON.parse(localStorage.getItem(USER_LIST_KEY));
 
-const javascriptReadableCart = JSON.parse(localStorage.getItem(CART_KEY));
-const addRows = (cart, cars) => {
-    cart.forEach(carOrder => {
-        addRow(carOrder, cars);
-    });
-};
 
-const buildTotalCell = (cart, cars) => {
-    const totalCell = document.getElementById('order-total-cell');
-    const cartTotal = calcCartTotal(javascriptReadableCart, cars);
 
-    totalCell.textContent = makePrettyCurrency(cartTotal);
+const addRows = (javascriptReadableUserList) => {
+    for (let i = 0; i < javascriptReadableUserList.length; i++) {
+        const player = javascriptReadableUserList[i];
+        addRow(player);
+    
+}
 };
 const tableElement = document.querySelector('tbody');
 
-const addRow = (carOrder, cars) => {
+const addRow = (player) => {
     
-    const orderCar = findItemById(cars, carOrder.id);
-    // const actualOrder = calcLineTotal(carOrder.quantity, orderCar.price);
 
-    const row = renderTableRow(orderCar, carOrder);
+    const row = renderTableRow(player.name, player.wins, player.losses);
     tableElement.appendChild(row);
-    
-
 };
-const buildTable = (cart, cars) => {
-    addRows(cart, cars);
-    buildTotalCell(cart, cars);
-};
-// calcLineTotal(javascriptReadableCart.quantity, javascriptReadableCart.price);
-buildTable(javascriptReadableCart, dataCars);
+   
 
+addRows(javascriptReadableUserList);
