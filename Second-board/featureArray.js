@@ -1,59 +1,49 @@
 import { getUser } from '../common/utils.js';
 let user = getUser();
-export const featureArray = [{
+export const featureArray2 = [{
     id: 'scarf',
-    description: ` Nose?    `,
-    yesMessage: `They know your scent now ${user}, your alien has a nose!`,
-    noMessage: `No nose on this alien, ${user}! Click the highlighted aliens.`
+    description: `Scarf?`,
+    yesMessage: `That's right, ${user}, the mystery person is wearing a scarf!`,
+    noMessage: `Nope, ${user}, the mystery person is not wearing a scarf.`
 }, {
-    id: 
-    description: 
-    yesMessage: 
-    noMessage: 
+    id: 'hat',
+    description: `Hat?`,
+    yesMessage: `That's right, ${user}, the mystery person is wearing a hat!`,
+    noMessage: `Nope, ${user}, the mystery person is not wearing a hat.`
 }, {
-    id:
-    description: 
-    yesMessage: 
-    noMessage: 
+    id: 'redhair',
+    description: `Red Hair?`,
+    yesMessage: `That's right, ${user}, the mystery person has red hair!`,
+    noMessage: `Nope, ${user}, the mystery person does not have red hair.`
 }, {
-    id: 
-    description: 
-    yesMessage: 
-    noMessage: 
+    id: 'brownhair',
+    description: `Brown Hair?`,
+    yesMessage: `That's right, ${user}, the mystery person has brown hair!`,
+    noMessage: `Nope, ${user}, the mystery person does not have brown hair.`
 }, {
-    id: 
-    description: 
-    yesMessage: 
-    noMessage: 
+    id: 'blackhair',
+    description: `Black Hair?`,
+    yesMessage: `That's right, ${user}, the mystery person has black hair!`,
+    noMessage: `Nope, ${user}, the mystery person does not have black hair.`
 }, {
-    id: 
-    description: 
-    yesMessage: 
-    noMessage: 
+    id: 'bald',
+    description: `Bald?`,
+    yesMessage: `That's right, ${user}, the mystery person is bald!`,
+    noMessage: `Nope, ${user}, the mystery person is not bald.`
 }, {
-    id: 
-    description: 
-    yesMessage: 
-    noMessage:  
+    id: 'tie',
+    description: `Tie?`,
+    yesMessage: `That's right, ${user}, the mystery person is wearing a tie!`,
+    noMessage: `Nope, ${user}, the mystery person is not wearing a tie.` 
 }, {
-    id: 
-    description: 
-    yesMessage: 
-    noMessage:
+    id: 'glasses',
+    description: `Glasses?`,
+    yesMessage: `That's right, ${user}, the mystery person is wearing glasses!`,
+    noMessage: `Nope, ${user}, the mystery person is not wearing glasses.`
 }, {
-    id: 
-    description: 
-    yesMessage: 
-    noMessage:  
-}, {
-    id: 
-    description: 
-    yesMessage: 
-    noMessage: 
-}, {
-    id: 
-    description: 
-    yesMessage:
-    noMessage:
+    id: 'freckles',
+    description: `Freckles?`,
+    yesMessage: `That's right, ${user}, the mystery person has freckles!`,
+    noMessage: `Nope, ${user}, the mystery person does not have freckles.` 
 }];
 
