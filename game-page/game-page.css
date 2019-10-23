@@ -35,7 +35,7 @@ input[type=radio] {
     display: none;
 }
 input[type=text] {
-    background: linear-gradient(to right, goldenrod, white);
+background: linear-gradient(to right, goldenrod, white, goldenrod);
 }
 nav {
   width: 100%;
