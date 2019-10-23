@@ -40,8 +40,9 @@ everyQuestionOption.forEach((questionOption) => {
         guessAmountRemaining--;
         guessAmountSpan.textContent = guessAmountRemaining;
         if (guessAmountRemaining < 1) {
-            window.location('./result-page/index.html');
+            window.location = '../result-page/index.html';
         }
+        
         const foundFeatureObject = findById(featureArray, questionOption.value);
         if (compareQuestionFeature(questionOption.value, computerCharacter)) {
             questionFeedbackSpan.textContent = foundFeatureObject.yesMessage;
@@ -50,8 +51,15 @@ everyQuestionOption.forEach((questionOption) => {
        
     });
 });
-
 userGuessSubmitButton.addEventListener('click', () => {
-    compareFace(guessedFace, computerCharacter.id);
-
+    guessAmountSpan.textContent = guessAmountRemaining;
+    if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
+        window.location = '../result-page/index.html';
+        return 'win';
+    } else guessAmountRemaining--;
+    guessAmountSpan.textContent = guessAmountRemaining;
+    if (guessAmountRemaining < 1) {
+        window.location = '../result-page/index.html';
+        return 'loses';
+    } 
 });

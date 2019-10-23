@@ -48,7 +48,7 @@ export function renderTableRow(userName, wins, losses) {
 
 export function compareFace(guessedFace, correctFaceId) {
     if (guessedFace === correctFaceId) {
-        window.location = '../results-page/index.html';
+        return true;
     } 
     
 }
