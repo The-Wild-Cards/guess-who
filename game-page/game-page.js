@@ -16,7 +16,7 @@ const userGuessText = document.getElementById('user-guess-text');
 const guessedFace = userGuessText.value.toLowerCase();
 
 //input text field with button that has even handler and take value of text field
-const flipButtons = document.querySelectorAll('.overlay2');
+const flipButtons = document.querySelectorAll('.overlay');
 const navagtion = document.getElementById('navigation');
 flipButtons.forEach(btn => {
     btn.addEventListener('click', function () {
