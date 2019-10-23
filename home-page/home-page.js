@@ -9,6 +9,7 @@ userCreation.addEventListener('submit', function(event) {
     const user = createUser(formData);
     saveUser(user);
     window.location = '../game-page/index.html';
+
 });
 
 
