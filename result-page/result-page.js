@@ -1,6 +1,5 @@
 import { loadProfile, getComputerCharacter, getResults } from '../common/utils.js';
 
-//gets user's name
 loadProfile(); 
 
 const computerCharacterImage = document.getElementById('correct-face');
@@ -11,20 +10,14 @@ const userDisplay = document.getElementById('win-or-lose');
 
 userDisplay.textContent = getResults(userDisplay);
 
+const homeSubmitButton = document.getElementById('home');
+const aboutUsButton = document.getElementById('about-us');
 
+homeSubmitButton.addEventListener('click', () => {
+    window.location = '../index.html';
+});
 
-// const gameSubmitButton = document.getElementById('play-again');
-// const homeSubmitButton = document.getElementById('home');
-// const aboutUsButton = document.getElementById('about-us');
-
-// homeSubmitButton.addEventListener('click', () => {
-//     window.location = '../game-page/index.html';
-// });
-// gameSubmitButton.addEventListener('click', () => {
-//     window.location = '../game-page/index.html';
-// });
-
-// aboutUsButton.addEventListener('click', () => {
-//     window.location = '../about-us/index.html';
-// });
+aboutUsButton.addEventListener('click', () => {
+    window.location = '../about-us/index.html';
+});
 
