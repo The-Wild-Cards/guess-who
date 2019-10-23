@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background: hsla(199, 100%, 25%, 1);
+  background: hsla(173, 100%, 40%, 1);
 }
 #outputs {
   text-align: center;
@@ -17,14 +17,12 @@
   border-radius: 3px;
   color: black;
   border: 2px solid hsla(0, 0%, 13%, 1);
-  background: linear-gradient(to right, hsla(199, 100%, 25%, 1), goldenrod, hsla(199, 100%, 25%, 1));
   -moz-box-shadow: inset 0 0 10px hsla(0, 0%, 8%, 1);
    -webkit-box-shadow: inset 0 0 10px hsla(0, 0%, 8%, 1);
    box-shadow: inset 0 0 10px hsla(0, 0%, 8%, 1);
    transition: all 1.5s ease;
 }
 #user-guess-submit-button:hover {
-  background: linear-gradient(to right, goldenrod,hsla(199, 100%, 25%, 1), goldenrod);
 }
 section {
   padding: 20px;
@@ -33,17 +31,17 @@ section {
   text-align: center;
   font-size: 2.5rem;
   text-shadow: 4px 4px 5px hsla(0, 0%, 13%, 1);
-  color: goldenrod;
+  color:hsla(300, 100%, 35%, 1);
 }
 body html {
   margin: 0;
   padding: 0;
-  background: hsla(199, 100%, 25%, 1);
+  background: hsla(173, 100%, 40%, 1);
 }
 .feature-label {
    font-size: 1.2rem;
   padding: 3px 10px;
-  color: goldenrod;
+  color:hsla(300, 100%, 35%, 1);
   box-shadow: 0 0 1px 1px hsla(0, 0%, 13%, 1); 
     border-radius: 1px;
     text-shadow: 4px 4px 5px hsla(0, 0%, 13%, 1);
@@ -56,7 +54,7 @@ input[type=radio] {
     display: none;
 }
 input[type=text] {
-    background: linear-gradient(to right, hsla(199, 100%, 25%, 1), goldenrod,hsla(199, 100%, 25%, 1));
+    background: linear-gradient(to right, hsla(199, 100%, 25%, 1),hsla(300, 100%, 35%, 1),hsla(199, 100%, 25%, 1));
     font-size: 1rem;
     text-align: center;
     outline: none;
@@ -85,20 +83,20 @@ input[type=text] {
 nav {
   width: 100%;
   height: 80px;
-  background: hsla(199, 100%, 25%, 1);
+  background: hsla(173, 100%, 40%, 1);
   color: white;
   text-align: center;
   font-size: 1rem;
 }
 #navigation {
   padding-top: 20px;
-  background: hsla(199, 100%, 25%, 1);
+  background: hsla(173, 100%, 40%, 1);
 }
 #grid-board {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 5px;
+  gap: 2px;
   transform-style: preserve-3d;
 }
 .container {
@@ -106,8 +104,8 @@ nav {
   margin: auto;
 }
 img {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   border: 3px solid black;
   border-radius: 5px;
   outline: 2px solid black;
@@ -124,7 +122,7 @@ img {
   transition: all 5s ease;
 }
 .content:hover {
-  color: goldenrod;
+  color:hsla(300, 100%, 35%, 1);
 }
 .overlay {
   display: flex;
@@ -133,8 +131,8 @@ img {
   height: 150px;
   width: 150px;
   border-radius: 5px;
-  border: 5px solid goldenrod;
-  border-top: 15px solid goldenrod;
+  border: 5px solid hsla(300, 100%, 35%, 1);
+  border-top: 20px solid hsla(300, 100%, 35%, 1);
   text-align: space-evenly;
   transition: all 3s ease;
 }

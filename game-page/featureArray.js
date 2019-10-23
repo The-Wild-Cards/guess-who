@@ -34,7 +34,7 @@ export const featureArray = [{
     id: 'twoEye',
     description: `2-Eyes?`,
     yesMessage: `${user}, this alien could pass for human since they have 2 eyes!`,
-    noMessage: `${user}, this alien has less or less eyes! It must be scary looking, click the hightlighted alien's.`
+    noMessage: `${user}, this alien has less or more eyes! It must be scary looking, click the hightlighted alien's.`
 }, {
     id: 'threeEye',
     description: `Three Eyes?`,
