@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
      background: hsla(156, 100%, 35%, 1);
 }
 body html{
     display: flex;
-    height: 100%vh;
-
+    height: 100vh;
 }
 input.name {
     display: flex;
@@ -21,7 +21,9 @@ form {
 }
 header {
     color: hsla(25, 100%, 28%, 1);
-    font-size: 2.5rem;
+    font-size: 2.7rem;
+    text-shadow: 4px 4px 5px hsla(0, 0%, 13%, 1);
+    padding-bottom: 10px;
 }
 img {
     display: flex;
@@ -57,7 +59,7 @@ input[type=radio] {
     display: none;
 }
 input[type=text] {
-    background: linear-gradient(to right, hsla(199, 100%, 25%, 1), goldenrod,hsla(199, 100%, 25%, 1));
+    background: linear-gradient(to right, hsla(25, 100%, 28%, 1), hsla(156, 100%, 35%, 1),hsla(199, 100%, 25%, 1),hsla(300, 100%, 35%, 1));
     font-size: 1rem;
     text-align: center;
     outline: none;
