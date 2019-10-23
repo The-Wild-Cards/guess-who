@@ -43,8 +43,7 @@ export function renderTableRow(userName, wins, losses) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.className = 'align-left';
-    nameCell.name = userName;
+    nameCell.textContent = userName;
     tr.appendChild(nameCell);
 
     const winCell = document.createElement('td');
@@ -56,7 +55,6 @@ export function renderTableRow(userName, wins, losses) {
     tr.appendChild(lossesCell);
 
     const percentageCell = document.createElement('td');
-    percentageCell.className = 'win-loss-percentage';
     const total = wins / losses;
     percentageCell.textContent = total;
     tr.appendChild(percentageCell);
