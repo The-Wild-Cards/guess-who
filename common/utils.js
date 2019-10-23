@@ -52,38 +52,38 @@ export function compareFace(guessedFace, correctFaceId) {
     } 
     
 }
-export const compareQuestionFeature = (questionOption, computerCharacter) => {
-    if (questionOption.id === 'horns' && computerCharacter.horns === true) {
+export const compareQuestionFeature = (questionOptionValue, computerCharacter) => {
+    if (questionOptionValue === 'horns' && computerCharacter.horns === true) {
         return true;
     }
-    if (questionOption.id === 'hat' && computerCharacter.hat === true) {
+    if (questionOptionValue === 'hat' && computerCharacter.hat === true) {
         return true;
     }
-    if (questionOption.id === 'hair' && computerCharacter.hair === true) {
+    if (questionOptionValue === 'hair' && computerCharacter.hair === true) {
         return true;
     }
-    if (questionOption.id === 'fin' && computerCharacter.fin === true) {
+    if (questionOptionValue === 'fin' && computerCharacter.fin === true) {
         return true;
     }
-    if (questionOption.id === 'oneEye' && computerCharacter.oneEye === true) {
+    if (questionOptionValue === 'oneEye' && computerCharacter.oneEye === true) {
         return true;
     }
-    if (questionOption.id === 'twoEyes' && computerCharacter.twoEyes === true) {
+    if (questionOptionValue === 'twoEyes' && computerCharacter.twoEyes === true) {
         return true;
     }
-    if (questionOption.id === 'threeEyes' && computerCharacter.threeEyes === true) {
+    if (questionOptionValue === 'threeEyes' && computerCharacter.threeEyes === true) {
         return true;
     }
-    if (questionOption.id === 'fourEyes' && computerCharacter.hat === true) {
+    if (questionOptionValue === 'fourEyes' && computerCharacter.fourEyes === true) {
         return true;
     }
-    if (questionOption.id === 'spots' && computerCharacter.spots === true) {
+    if (questionOptionValue === 'spots' && computerCharacter.spots === true) {
         return true;
     }
-    if (questionOption.id === 'nose' && computerCharacter.nose === true) {
+    if (questionOptionValue === 'nose' && computerCharacter.nose === true) {
         return true;
     }
-    if (questionOption.id === 'ears' && computerCharacter.ears === true) {
+    if (questionOptionValue === 'ears' && computerCharacter.ears === true) {
         return true;
     } else return false;
 };
