@@ -6,7 +6,7 @@ import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
 import { createFeature } from './create-feature.js';
 
-
+// const highlighted = document.querySelectorAll('.container');
 const computerCharacter = correctFace(characterArray);
 const questionFeedbackSpan = document.getElementById('question-feedback');
 const guessAmountSpan = document.getElementById('guess-amount');
@@ -36,21 +36,30 @@ console.log(everyQuestionOption);
 console.log(computerCharacter);
 everyQuestionOption.forEach((questionOption) => {
     questionOption.addEventListener('click', () => {
+       
         guessAmountRemaining--;
         guessAmountSpan.textContent = guessAmountRemaining;
         if (guessAmountRemaining < 1) {
-            window.location('./result-page/index.html');
+            window.location = '../result-page/index.html';
         }
-        const foundFeatureObject = findById(featureArray, questionOption.value);
         
+        const foundFeatureObject = findById(featureArray, questionOption.value);
         if (compareQuestionFeature(questionOption.value, computerCharacter)) {
             questionFeedbackSpan.textContent = foundFeatureObject.yesMessage;
-
         } else questionFeedbackSpan.textContent = foundFeatureObject.noMessage;
+        //highlighted.classList.add('highlight');
+       
     });
 });
-
 userGuessSubmitButton.addEventListener('click', () => {
-    compareFace(guessedFace, computerCharacter.id);
-
+    guessAmountSpan.textContent = guessAmountRemaining;
+    if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
+        window.location = '../result-page/index.html';
+        return 'win';
+    } else guessAmountRemaining--;
+    guessAmountSpan.textContent = guessAmountRemaining;
+    if (guessAmountRemaining < 1) {
+        window.location = '../result-page/index.html';
+        return 'loses';
+    } 
 });
