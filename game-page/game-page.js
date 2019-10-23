@@ -10,7 +10,7 @@ import { createFeature } from './create-feature.js';
 const computerCharacter = correctFace(characterArray);
 const questionFeedbackSpan = document.getElementById('question-feedback');
 const guessAmountSpan = document.getElementById('guess-amount');
-let guessAmountRemaining = 5;
+let guessAmountRemaining = 10;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
 const guessedFace = userGuessText.value.toLowerCase();
@@ -19,7 +19,7 @@ const guessedFace = userGuessText.value.toLowerCase();
 const flipButtons = document.querySelectorAll('.overlay2');
 const navagtion = document.getElementById('navigation');
 flipButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         btn.classList.add('overlay3');
     });
 });
@@ -27,7 +27,7 @@ flipButtons.forEach(btn => {
 featureArray.forEach((item) => {
     const radioButton = createFeature(item);
     navagtion.appendChild(radioButton);
-    
+
 });
 
 
@@ -41,17 +41,12 @@ everyQuestionOption.forEach((questionOption) => {
         if (guessAmountRemaining < 1) {
             window.location('./result-page/index.html');
         }
-        // featureArray.find(questionOption.value);
-        
-        compareQuestionFeature(questionOption.value, computerCharacter);
         const foundFeatureObject = findById(featureArray, questionOption.value);
-
-        console.log(questionOption);
-        if (compareQuestionFeature === true) {
+        
+        if (compareQuestionFeature(questionOption.value, computerCharacter)) {
             questionFeedbackSpan.textContent = foundFeatureObject.yesMessage;
 
         } else questionFeedbackSpan.textContent = foundFeatureObject.noMessage;
-        
     });
 });
 
