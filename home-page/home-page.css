@@ -105,11 +105,14 @@ h4 {
     font-size: 60px;
     text-shadow: 4px 4px 4px goldenrod;
     font-size: 1.5rem;
+    margin: 1%;
 }
+
 label {
     display: flex;
     justify-content: center;
 }
+
 section {
     padding: 5px 30px 10px 30px;
 }

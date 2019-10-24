@@ -46,7 +46,7 @@ homeSubmitButton.addEventListener('click', () => {
 });
 
 aboutUsButton.addEventListener('click', () => {
-    window.location = '../about-us/index.html';
+
+    window.location = '../about-us-page/index.html';
 });
-//random comment 
 
