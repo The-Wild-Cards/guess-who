@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +9,23 @@
    <title>Guess Who</title>
 </head>
 <body>
-    <div class="container">
     <nav>
  <header>Guess Who?</header>
 </nav>
 <form id="user-creation">
-<label>
+<label id="name-input">
 <input id="name" name="name" placeholder="Your Name" type="text" required>
 </label>
-</form>
-<div id="board">
-<label>
-    <input name="game" value="alien" type="radio">
-    <img src="./assets/about-us/alienBoard.png" class="game-board">
-</label>
-<label>
+<button>Play</button>
+<label id="people-game">
     <input name="game" value="people" type="radio">
-    <img src="./assets/about-us/alienBoard.png" class="game-board">
+    <img src="./assets/about-us/people.png" class="game-board">
 </label>
-</div>
+<label id="alien-game">
+    <input name="game" value="alien" type="radio">
+    <img src="./assets/about-us/aliens.png" class="game-board">
+</label>
+</form>
 <section>
     <h4>Game rules:</h4>
 Begin by picking from the descriptions at the top. Example with the Aliens, click the "Hat?" to see if they are wearing
