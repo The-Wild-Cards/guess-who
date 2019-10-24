@@ -1,4 +1,3 @@
-
 import { characterArray } from '../common/character-data.js';
 import { correctFace, findById, saveComputerCharacter, getUser, saveResults } from '../common/utils.js';
 import { compareQuestionFeature } from '../common/utils.js';
@@ -19,26 +18,25 @@ const user = getUser();
 
 saveComputerCharacter(computerCharacter);
 
-//input text field with button that has even handler and take value of text field
+
 const flipButtons = document.querySelectorAll('.overlay');
 const navagtion = document.getElementById('navigation');
-const everyQuestionOption = document.querySelectorAll('.option');
 
+featureArray.forEach((item) => {
+    const radioButton = createFeature(item);
+    navagtion.appendChild(radioButton);
+    
+});
+const everyQuestionOption = document.querySelectorAll('.option');
 
 flipButtons.forEach(btn => {
     btn.addEventListener('click', function() {
         btn.classList.add('overlay3');
     });
 });
-featureArray.forEach((item) => {
-    const radioButton = createFeature(item);
-    navagtion.appendChild(radioButton);
-
-});
 console.log(user);
-console.log(everyQuestionOption);
+console.log(everyQuestionOption, 'question options');
 console.log(computerCharacter);
-
 everyQuestionOption.forEach((questionOption) => {
     questionOption.addEventListener('click', () => {
        
@@ -59,12 +57,12 @@ userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = guessAmountRemaining;
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
 
-        // user.wins++;
+        user.wins++;
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
     guessAmountSpan.textContent = guessAmountRemaining;
     if (guessAmountRemaining < 1) {
-        // user.losses++;
+        user.losses++;
 
         const win = 'You Win';
         saveResults(win);
