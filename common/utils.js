@@ -10,9 +10,27 @@ export function findById(characterArray, id) {
         }
     }
 }
+export const saveUserArray = (userArray) => {
+    const jsonUserArray = JSON.stringify(userArray);
+    localStorage.setItem('user-array', jsonUserArray);
+};
 export function saveUser(user) {
     const jsonUser = JSON.stringify(user);
     localStorage.setItem('user', jsonUser);
+}
+export const findUserByName = (userArray, userName) => {
+    for (let i = 0; i < userArray.length; i++) {
+        const user = userArray[i];
+        if (user.name === userName) { 
+            return user;
+        }
+    }
+};
+export function getUserArray() {
+    const getJsonUserArray = localStorage.getItem('user-array');
+    if (!getJsonUserArray) return null;
+    const userArray = JSON.parse(getJsonUserArray);
+    return userArray;
 }
 
 export function getUser() {
@@ -25,8 +43,7 @@ export function renderTableRow(userName, wins, losses) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.className = 'align-left';
-    nameCell.name = userName;
+    nameCell.textContent = userName;
     tr.appendChild(nameCell);
 
     const winCell = document.createElement('td');
@@ -38,7 +55,6 @@ export function renderTableRow(userName, wins, losses) {
     tr.appendChild(lossesCell);
 
     const percentageCell = document.createElement('td');
-    percentageCell.className = 'win-loss-percentage';
     const total = wins / losses;
     percentageCell.textContent = total;
     tr.appendChild(percentageCell);
@@ -48,7 +64,7 @@ export function renderTableRow(userName, wins, losses) {
 
 export function compareFace(guessedFace, correctFaceId) {
     if (guessedFace === correctFaceId) {
-        window.location = '../results-page/index.html';
+        return true;
     } 
     
 }
@@ -91,6 +107,8 @@ export const compareQuestionFeature = (questionOptionValue, computerCharacter) =
 export function createUser(formData) {
     const user = {
         name: formData.get('name'),
+        wins:0,
+        losses:0,
     };
     return user;
 }
@@ -105,8 +123,8 @@ export function loadProfile() {
     name.textContent = user.name;
 }
 
-export function saveComputerCharacter(computer) {
-    const json = JSON.stringify(computer);
+export function saveComputerCharacter(computerCharacter) {
+    const json = JSON.stringify(computerCharacter);
     localStorage.setItem('computer-character', json);
 }
 
@@ -114,6 +132,17 @@ export function getComputerCharacter() {
     const getJsonFace = localStorage.getItem('computer-character');
     if (!getJsonFace) return null;
     const computerFace = JSON.parse(getJsonFace);
-    return computerFace;
+    return computerFace.id;
 }
 
+export function saveResults(winOrLose) {
+    const json = JSON.stringify(winOrLose);
+    localStorage.setItem('win-Lose', json);
+}
+
+export function getResults() {
+    const get = localStorage.getItem('win-Lose');
+    if (!get) return null;
+    const results = JSON.parse(get);
+    return results;
+}

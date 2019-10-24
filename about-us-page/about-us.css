@@ -11,8 +11,8 @@ body {
     flex-wrap: wrap;
     width: 600px;
     height: 500px;
-margin-left: auto;
-margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
 }
 .alien{
@@ -27,4 +27,10 @@ margin-right: auto;
     background-color: wheat;
     padding-left: 10px;
     padding-right: 10px;
+}
+.button{
+    padding:15px;
+    border-radius: 20px;
+    background-color: skyblue;
+    font-size: 20px;
 }
