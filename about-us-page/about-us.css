@@ -29,7 +29,11 @@ body {
     border-radius: 30px;
     background-color: goldenrod;
     padding: 5px 10px 5px 10px;
-    width: 150px;
+    width: 180px;
+}
+
+p {
+    width: 300px;
 }
 .button {
     padding: 10px;
