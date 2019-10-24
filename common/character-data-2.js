@@ -9,7 +9,8 @@ export const characterArray2 = [{
     bald: false, 
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'abby',
@@ -22,7 +23,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: true
 
 }, {
     id:'bob',
@@ -35,7 +37,8 @@ export const characterArray2 = [{
     bald: true,
     tie: false,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'brin',
@@ -48,7 +51,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'caley',
@@ -62,6 +66,7 @@ export const characterArray2 = [{
     tie: false,
     glasses: false,
     freckles: false,
+    earrings: false
 
 }, {
     id:'carter',
@@ -74,7 +79,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'casey',
@@ -87,7 +93,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'charlotte',
@@ -100,7 +107,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: false,
-    freckles: true
+    freckles: true,
+    earrings: false
 
 }, {
     id:'clark',
@@ -113,7 +121,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'dacee',
@@ -126,7 +135,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: false,
-    freckles: true
+    freckles: true,
+    earrings: false
 
 }, {
     id:'damien',
@@ -139,7 +149,8 @@ export const characterArray2 = [{
     bald: false,
     tie: true,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'ethal',
@@ -152,7 +163,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: false,
-    freckles: true
+    freckles: true,
+    earrings: false
 
 }, {
     id:'fae',
@@ -165,7 +177,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: false
 }, {
     id:'hazel',
     name:'Hazel',
@@ -177,7 +190,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: true
 
 }, {
     id:'jamie',
@@ -190,7 +204,8 @@ export const characterArray2 = [{
     bald: false,
     tie: true,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'jason',
@@ -203,7 +218,8 @@ export const characterArray2 = [{
     bald: true,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'jazz',
@@ -216,7 +232,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'kari',
@@ -229,7 +246,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: true
+    freckles: true,
+    earrings: true
 
 }, {
     id:'kevin',
@@ -242,7 +260,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'mayble',
@@ -255,7 +274,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: true
 
 }, {
     id:'mikey',
@@ -268,7 +288,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'barack',
@@ -281,7 +302,8 @@ export const characterArray2 = [{
     bald: false,
     tie: true,
     glasses: false,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'steve',
@@ -294,7 +316,8 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: false
 
 }, {
     id:'taren',
@@ -307,6 +330,7 @@ export const characterArray2 = [{
     bald: false,
     tie: false,
     glasses: true,
-    freckles: false
+    freckles: false,
+    earrings: false
 }
 ];

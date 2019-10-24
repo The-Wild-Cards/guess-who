@@ -1,4 +1,5 @@
 import { saveUser, createUser, findUserByName, saveUserArray, getUserArray, getUser } from '../common/utils.js';
+
 const userCreation = document.getElementById('user-creation');
 let userArray = [];
 

@@ -1,11 +1,9 @@
 * {
     font-family: 'Acme', sans-serif;
 }
-
 h1 {
     font-size: 60px;
 }
-
 body {
     text-align: center;
     justify-content: center;
@@ -31,9 +29,8 @@ body {
     border-radius: 30px;
     background-color: goldenrod;
     padding: 5px 10px 5px 10px;
-    width: 200px;
+    width: 150px;
 }
-
 .button {
     padding: 10px;
     border-radius: 15px;
@@ -41,7 +38,6 @@ body {
     background-color: skyblue;
     border: 2px solid black;
 }
-
 .button:hover {
     cursor: pointer;
     background-color: white;
