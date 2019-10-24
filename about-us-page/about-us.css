@@ -1,0 +1,44 @@
+* {
+    font-family: 'Acme', sans-serif;
+}
+h1 {
+    font-size: 60px;
+}
+body {
+    text-align: center;
+    justify-content: center;
+    background-color: lightgoldenrodyellow;
+}
+.contain {
+    display: flex;
+    width: 600px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.alien {
+    padding: 30px;
+}
+.image {
+    border: solid 2px black;
+    border-radius: 15px;
+}
+.name {
+    border: solid 2px black;
+    border-radius: 30px;
+    background-color: goldenrod;
+    padding: 5px 10px 5px 10px;
+    width: 150px;
+}
+.button {
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 30px;
+    background-color: skyblue;
+    border: 2px solid black;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: white;
+}
