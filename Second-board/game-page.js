@@ -13,7 +13,6 @@ const guessAmountSpan = document.getElementById('guess-amount');
 let guessAmountRemaining = 5;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
-const userGuessTextResponse = document.getElementById('guess-response');
 
 const user = getUser();
 
@@ -53,7 +52,7 @@ userGuessSubmitButton.addEventListener('click', () => {
         saveResults(win);
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
-    userGuessTextResponse.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
+    questionFeedbackSpan.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
     if (guessAmountRemaining < 1) {
         user.losses++;
