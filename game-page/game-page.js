@@ -56,7 +56,6 @@ everyQuestionOption.forEach((questionOption) => {
 userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
-
         user.wins++;
         window.location = '../result-page/index.html';
         const win = 'You Win';
