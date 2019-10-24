@@ -3,7 +3,7 @@
 import { findById, renderTableRow } from '../common/utils.js';
 
 const test = QUnit.test;
-test('testing that findById finds character by Id', function (assert) {
+test('testing that findById finds character by Id', function(assert) {
     const mockData = [{
         id: 'walter',
         name: 'Walter',
@@ -95,7 +95,7 @@ test('testing that renderTableRow renders table row', assert => {
     const wins = 3;
     const losses = 2;
     const userName = 'Steve';
-    const expected = '<tr><td class="align-left"></td><td>3</td><td>2</td><td class="win-loss-percentage">1.5</td></tr>';
+    const expected = '<tr><td>Steve</td><td>3</td><td>2</td><td>60%</td></tr>';
 
     //Act 
     // Call the function you're testing and set the result to a const

@@ -1,12 +1,11 @@
 
-import { loadProfile, getComputerCharacter, renderTableRow, getResults } from '../common/utils.js';
+import { getComputerCharacter, renderTableRow, getResults } from '../common/utils.js';
 const USER_LIST_KEY = 'user-array';
 const userDisplayWinOrLose = document.getElementById('win-or-lose');
 const characterId = getComputerCharacter();
 const computerCharacterImage = document.getElementById('correct-face');
 const tableElement = document.querySelector('tbody');
 const correctCharacterName = document.getElementById('correct-character');
-loadProfile(); 
 correctCharacterName.textContent = characterId;
 
 

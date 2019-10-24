@@ -158,15 +158,6 @@ export function createUser(formData) {
 }
 
 
-export function loadProfile() {
-    const name = document.getElementById('name');
-    const user = getUser();
-    if (!user) {
-        window.location = './';
-    }
-    name.textContent = user.name;
-}
-
 export function saveComputerCharacter(computerCharacter) {
     const json = JSON.stringify(computerCharacter);
     localStorage.setItem('computer-character', json);
