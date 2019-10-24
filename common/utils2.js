@@ -69,7 +69,7 @@ export const compareQuestionFeature = (
     questionOptionValue,
     computerCharacter
 ) => {
-    if (questionOptionValue === 'hat' && computerCharacter.scarf === true) {
+    if (questionOptionValue === 'hat' && computerCharacter.hat === true) {
         return true;
     }
     if (questionOptionValue === 'scarf' && computerCharacter.scarf === true) {
