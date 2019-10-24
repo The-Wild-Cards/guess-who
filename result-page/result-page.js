@@ -5,11 +5,9 @@ const userDisplayWinOrLose = document.getElementById('win-or-lose');
 const characterId = getComputerCharacter();
 const computerCharacterImage = document.getElementById('correct-face');
 const tableElement = document.querySelector('tbody');
-
-
-
+const correctCharacterName = document.getElementById('correct-character');
 loadProfile(); 
-
+correctCharacterName.textContent = characterId;
 
 
 computerCharacterImage.src = ('../assets/faces/' + characterId + '.png');
