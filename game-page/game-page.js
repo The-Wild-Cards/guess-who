@@ -1,14 +1,13 @@
 
 import { characterArray } from '../common/character-data.js';
-import { correctFace, findById, saveComputerCharacter, getUser } from '../common/utils.js';
+import { correctFace, findById, saveComputerCharacter, getUser, saveResults } from '../common/utils.js';
 import { compareQuestionFeature } from '../common/utils.js';
 import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
 import { createFeature } from './create-feature.js';
+import { loadProfile } from '../common/utils.js';
 
 
-
-// const highlighted = document.querySelectorAll('.container');
 const computerCharacter = correctFace(characterArray);
 const questionFeedbackSpan = document.getElementById('question-feedback');
 const guessAmountSpan = document.getElementById('guess-amount');
@@ -16,6 +15,7 @@ let guessAmountRemaining = 10;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
 const user = getUser();
+
 
 saveComputerCharacter(computerCharacter);
 
@@ -48,7 +48,6 @@ everyQuestionOption.forEach((questionOption) => {
             user.losses++;
             window.location = '../result-page/index.html';
         }
-        
         const foundFeatureObject = findById(featureArray, questionOption.value);
         if (compareQuestionFeature(questionOption.value, computerCharacter)) {
             questionFeedbackSpan.textContent = foundFeatureObject.yesMessage;
@@ -59,13 +58,27 @@ everyQuestionOption.forEach((questionOption) => {
 userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = guessAmountRemaining;
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
+
         user.wins++;
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
     guessAmountSpan.textContent = guessAmountRemaining;
     if (guessAmountRemaining < 1) {
         user.losses++;
+
+        const win = 'You Win';
+        saveResults(win);
         window.location = '../result-page/index.html';
-        return 'loses';
+      
+    
+    } else guessAmountRemaining--;
+    guessAmountSpan.textContent = guessAmountRemaining;
+    if (guessAmountRemaining < 1) {
+        const lost = 'You Lose';
+        saveResults(lost);
+
+        window.location = '../result-page/index.html';
     } 
+
 });
+loadProfile(); 

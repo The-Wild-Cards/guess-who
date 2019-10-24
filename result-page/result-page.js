@@ -1,7 +1,9 @@
-import { loadProfile, getComputerCharacter, renderTableRow } from '../common/utils.js';
 
-
+import { loadProfile, getComputerCharacter, renderTableRow, getResults } from '../common/utils.js';
 const USER_LIST_KEY = 'user-array';
+
+
+
 loadProfile(); 
 
 const computerCharacterImage = document.getElementById('correct-face');
@@ -25,8 +27,26 @@ const addRow = (player) => {
     
     const row = renderTableRow(player.name, player.wins, player.losses);
 
+
     tableElement.appendChild(row);
 };
    
 
 addRows(javascriptReadableUserList);
+
+const userDisplay = document.getElementById('win-or-lose');
+
+userDisplay.textContent = getResults(userDisplay);
+
+const homeSubmitButton = document.getElementById('home');
+const aboutUsButton = document.getElementById('about-us');
+
+homeSubmitButton.addEventListener('click', () => {
+    window.location = '../index.html';
+});
+
+aboutUsButton.addEventListener('click', () => {
+    window.location = '../about-us/index.html';
+});
+//random comment 
+

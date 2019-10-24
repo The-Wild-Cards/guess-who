@@ -135,3 +135,14 @@ export function getComputerCharacter() {
     return computerFace.id;
 }
 
+export function saveResults(winOrLose) {
+    const json = JSON.stringify(winOrLose);
+    localStorage.setItem('win-Lose', json);
+}
+
+export function getResults() {
+    const get = localStorage.getItem('win-Lose');
+    if (!get) return null;
+    const results = JSON.parse(get);
+    return results;
+}
