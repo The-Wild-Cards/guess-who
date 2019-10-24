@@ -10,6 +10,7 @@ loadProfile();
 correctCharacterName.textContent = characterId;
 
 
+
 computerCharacterImage.src = ('../assets/faces/' + characterId + '.png');
 const javascriptReadableUserList = JSON.parse(localStorage.getItem(USER_LIST_KEY));
 const addRows = (javascriptReadableUserList) => {
