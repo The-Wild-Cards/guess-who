@@ -1,4 +1,3 @@
-
 import { getComputerCharacter, renderTableRow, getResults } from '../common/utils.js';
 const USER_LIST_KEY = 'user-array';
 const userDisplayWinOrLose = document.getElementById('win-or-lose');
@@ -7,8 +6,6 @@ const computerCharacterImage = document.getElementById('correct-face');
 const tableElement = document.querySelector('tbody');
 const correctCharacterName = document.getElementById('correct-character');
 correctCharacterName.textContent = characterId;
-
-
 
 computerCharacterImage.src = ('../assets/faces/' + characterId + '.png');
 const javascriptReadableUserList = JSON.parse(localStorage.getItem(USER_LIST_KEY));
@@ -23,19 +20,13 @@ const addRow = (player) => {
     tableElement.appendChild(row);
 };
 addRows(javascriptReadableUserList);
-
-
 userDisplayWinOrLose.textContent = getResults();
-
 const homeSubmitButton = document.getElementById('home');
 const aboutUsButton = document.getElementById('about-us');
-
 homeSubmitButton.addEventListener('click', () => {
     window.location = '../index.html';
 });
-
 aboutUsButton.addEventListener('click', () => {
-
     window.location = '../about-us-page/index.html';
 });
 
