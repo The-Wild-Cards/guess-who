@@ -24,10 +24,11 @@ userCreation.addEventListener('submit', function(event) {
     }
     
     saveUser(user);
-    window.location = '../game-page/index.html';
-
+    let chosenGameBoard = document.querySelector('input:checked').value;
+    if (chosenGameBoard === 'people'){
+        window.location = './Second-board/index.html';
+    } else window.location = '../game-page/index.html';
 });
-
 
 
 
