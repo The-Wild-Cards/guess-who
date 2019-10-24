@@ -39,9 +39,8 @@ console.log(everyQuestionOption, 'question options');
 console.log(computerCharacter);
 everyQuestionOption.forEach((questionOption) => {
     questionOption.addEventListener('click', () => {
-       
         guessAmountRemaining--;
-        guessAmountSpan.textContent = guessAmountRemaining;
+        guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
         if (guessAmountRemaining < 1) {
             user.losses++;
             window.location = '../result-page/index.html';
