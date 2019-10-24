@@ -11,8 +11,6 @@ const tableElement = document.querySelector('tbody');
 loadProfile(); 
 
 
-const computerCharacterImage = document.getElementById('correct-face');
-const characterId = getComputerCharacter();
 
 computerCharacterImage.src = ('../assets/faces/' + characterId + '.png');
 const javascriptReadableUserList = JSON.parse(localStorage.getItem(USER_LIST_KEY));
