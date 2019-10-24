@@ -167,7 +167,7 @@ export function getComputerCharacter() {
     const getJsonFace = localStorage.getItem('computer-character');
     if (!getJsonFace) return null;
     const computerFace = JSON.parse(getJsonFace);
-    return computerFace.id;
+    return computerFace;
 }
 
 export function saveResults(winOrLose) {
