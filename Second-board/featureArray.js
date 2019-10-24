@@ -1,4 +1,4 @@
-import { getUser } from '../common/utils2.js';
+import { getUser } from '../common/utils.js';
 let user = getUser();
 export const featureArray2 = [{
     id: 'scarf',
