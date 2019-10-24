@@ -7,24 +7,16 @@ import { createFeature } from './create-feature.js';
 import { loadProfile } from '../common/utils.js';
 
 const userArray = getUserArray();
-
-const userGuessTextResponse = document.getElementById('guess-response');
-
 const computerCharacter = correctFace(characterArray);
 const questionFeedbackSpan = document.getElementById('question-feedback');
 const guessAmountSpan = document.getElementById('guess-amount');
-let guessAmountRemaining = 10;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
-
 const user = getUser();
-
-
-saveComputerCharacter(computerCharacter);
-
-
 const flipButtons = document.querySelectorAll('.overlay');
 const navagtion = document.getElementById('navigation');
+let guessAmountRemaining = 6;
+saveComputerCharacter(computerCharacter);
 
 featureArray.forEach((item) => {
     const radioButton = createFeature(item);
@@ -38,9 +30,6 @@ flipButtons.forEach(btn => {
         btn.classList.add('overlay3');
     });
 });
-console.log(user);
-console.log(everyQuestionOption, 'question options');
-console.log(computerCharacter);
 everyQuestionOption.forEach((questionOption) => {
     questionOption.addEventListener('click', () => {
         guessAmountRemaining--;
@@ -54,7 +43,6 @@ everyQuestionOption.forEach((questionOption) => {
         } else questionFeedbackSpan.textContent = foundFeatureObject.noMessage;
     });
 });
-
 userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = guessAmountRemaining;
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
@@ -66,7 +54,7 @@ userGuessSubmitButton.addEventListener('click', () => {
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
-    userGuessTextResponse.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
+    questionFeedbackSpan.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
     if (guessAmountRemaining < 1) {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.losses++;
@@ -74,7 +62,5 @@ userGuessSubmitButton.addEventListener('click', () => {
         const lose = 'You Lose';
         saveResults(lose);
         window.location = '../result-page/index.html';
-      
-    
     } 
 });
