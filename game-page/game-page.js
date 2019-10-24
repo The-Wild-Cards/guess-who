@@ -43,7 +43,6 @@ everyQuestionOption.forEach((questionOption) => {
         guessAmountRemaining--;
         guessAmountSpan.textContent = guessAmountRemaining;
         if (guessAmountRemaining < 1) {
-            user.losses++;
             window.location = '../result-page/index.html';
         }
         const foundFeatureObject = findById(featureArray, questionOption.value);
@@ -57,7 +56,6 @@ userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = guessAmountRemaining;
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
 
-        user.wins++;
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
     guessAmountSpan.textContent = guessAmountRemaining;
