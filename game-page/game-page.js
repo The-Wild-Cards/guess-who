@@ -49,7 +49,7 @@ userGuessSubmitButton.addEventListener('click', () => {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.wins++;
         saveUserArray(userArray);
-        const win = 'Win';
+        const win = 'You Win';
         saveResults(win);
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
@@ -59,9 +59,8 @@ userGuessSubmitButton.addEventListener('click', () => {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.losses++;
         saveUserArray(userArray);
-        const lose = 'Lose';
+        const lose = 'You Lose';
         saveResults(lose);
         window.location = '../result-page/index.html';
     } 
 });
-loadProfile(); 

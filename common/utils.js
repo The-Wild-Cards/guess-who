@@ -103,6 +103,50 @@ export const compareQuestionFeature = (questionOptionValue, computerCharacter) =
         return true;
     } else return false;
 };
+export const compareQuestionFeatureTwo = (
+    questionOptionValue,
+    computerCharacter
+) => {
+    if (questionOptionValue === 'hat' && computerCharacter.hat === true) {
+        return true;
+    }
+    if (questionOptionValue === 'scarf' && computerCharacter.scarf === true) {
+        return true;
+    }
+    if (questionOptionValue === 'redhair' && computerCharacter.redhair === true) {
+        return true;
+    }
+    if (questionOptionValue === 'brownhair' && computerCharacter.brownhair === true) {
+        return true;
+    }
+    if (questionOptionValue === 'bald' && computerCharacter.bald === true) {
+        return true;
+    }
+    if (
+        questionOptionValue === 'tie' &&
+        computerCharacter.tie === true
+    ) {
+        return true;
+    }
+    if (
+        questionOptionValue === 'glasses' &&
+        computerCharacter.glasses === true
+    ) {
+        return true;
+    }
+    if (
+        questionOptionValue === 'freckles' &&
+        computerCharacter.freckles === true
+    ) {
+        return true;
+    }
+    if (questionOptionValue === 'earrings' && computerCharacter.earrings === true) {
+        return true;
+    }
+    if (questionOptionValue === 'blackhair' && computerCharacter.blackhair === true) {
+        return true;
+    } else return false;
+};
 
 export function createUser(formData) {
     const user = {
@@ -137,11 +181,11 @@ export function getComputerCharacter() {
 
 export function saveResults(winOrLose) {
     const json = JSON.stringify(winOrLose);
-    localStorage.setItem('win-Lose', json);
+    localStorage.setItem('win-lose', json);
 }
 
 export function getResults() {
-    const get = localStorage.getItem('win-Lose');
+    const get = localStorage.getItem('win-lose');
     if (!get) return null;
     const results = JSON.parse(get);
     return results;
