@@ -1,14 +1,13 @@
 
-import { getComputerCharacter, renderTableRow, getResults } from '../common/utils.js';
+import { getComputerCharacter, renderTableRow, getResults, getUser } from '../common/utils.js';
 const USER_LIST_KEY = 'user-array';
+const helloUser = document.getElementById('name');
 const userDisplayWinOrLose = document.getElementById('win-or-lose');
 const characterId = getComputerCharacter();
 const computerCharacterImage = document.getElementById('correct-face');
 const tableElement = document.querySelector('tbody');
 const correctCharacterName = document.getElementById('correct-character');
 correctCharacterName.textContent = characterId;
-
-
 
 computerCharacterImage.src = ('../assets/faces/' + characterId + '.png');
 const javascriptReadableUserList = JSON.parse(localStorage.getItem(USER_LIST_KEY));
@@ -24,6 +23,8 @@ const addRow = (player) => {
 };
 addRows(javascriptReadableUserList);
 
+let user = getUser();
+helloUser.textContent = user.name;
 
 userDisplayWinOrLose.textContent = getResults();
 

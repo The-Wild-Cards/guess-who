@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="result-page.css">
+    <link rel="stylesheet" href="result-page-2.css">
     <title>Results</title>
 </head>
 
@@ -16,15 +16,15 @@
 
 <body>
     <div class="container">
-        <h3>Hello, <span id="name"></span></h3>
+        <h3>Hello, <span id="name"></span>.</h3>
 
         <span id="win-or-lose"></span>
 
     
-        <p>The correct character was <span id="correct-character"></span></p>
+        <p>The correct character was... <span id="correct-character"></span>!</p>
         <img id="correct-face" src="">
         <br>
-        <div class="leaderboard">
+
             <h3>Leaderboard:</h3>
 
             <table id="leaderboard">
@@ -40,11 +40,11 @@
         
                 </tbody>
 
-        </div>
-<button id="home">Home</button>
-    <br>
-    <br>
-  <button id="about-us">About Us</button>
+
+    <div class="buttons">
+        <button id="home">Home</button>
+        <button id="about-us">About Us</button>
+    </div>
           
     <script type="module" src="result-page.js"></script>
     <script type="module" src="../common/utils.js"></script>
