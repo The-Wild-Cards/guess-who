@@ -19,26 +19,25 @@ const user = getUser();
 
 saveComputerCharacter(computerCharacter);
 
-//input text field with button that has even handler and take value of text field
+
 const flipButtons = document.querySelectorAll('.overlay');
 const navagtion = document.getElementById('navigation');
-const everyQuestionOption = document.querySelectorAll('.option');
 
+featureArray.forEach((item) => {
+    const radioButton = createFeature(item);
+    navagtion.appendChild(radioButton);
+    
+});
+const everyQuestionOption = document.querySelectorAll('.option');
 
 flipButtons.forEach(btn => {
     btn.addEventListener('click', function() {
         btn.classList.add('overlay3');
     });
 });
-featureArray.forEach((item) => {
-    const radioButton = createFeature(item);
-    navagtion.appendChild(radioButton);
-
-});
 console.log(user);
-console.log(everyQuestionOption);
+console.log(everyQuestionOption, 'question options');
 console.log(computerCharacter);
-
 everyQuestionOption.forEach((questionOption) => {
     questionOption.addEventListener('click', () => {
        
