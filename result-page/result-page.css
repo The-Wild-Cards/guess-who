@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    font-family: 'Acme', sans-serif;
 }
 
 body {
@@ -36,6 +35,7 @@ p {
     height: 180px;
     width: 140px;
     border: 1px dashed black;
+    border-radius: 15px;
 }
 
 #leaderboard {

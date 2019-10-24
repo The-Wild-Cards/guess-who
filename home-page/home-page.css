@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Acme', sans-serif;
-     background: hsla(156, 100%, 35%, 1);
+    background: hsla(156, 100%, 35%, 1);
 }
 body html{
     display: flex;
@@ -93,7 +93,9 @@ h4 {
     color: hsla(25, 100%, 28%, 1);
     text-shadow: 2px 2px 3px black;
     font-size: 1.5rem;
+    margin: 1%;
 }
+
 section {
     padding: 5px 30px 10px 30px;
 }
