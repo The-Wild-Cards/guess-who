@@ -1,11 +1,14 @@
 import { characterArray } from '../common/character-data.js';
-import { correctFace, findById, saveComputerCharacter, getUser, saveResults } from '../common/utils.js';
+import { correctFace, findById, saveComputerCharacter, getUser, saveResults, getUserArray, findUserByName, saveUserArray } from '../common/utils.js';
 import { compareQuestionFeature } from '../common/utils.js';
 import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
 import { createFeature } from './create-feature.js';
 import { loadProfile } from '../common/utils.js';
 
+const userArray = getUserArray();
+
+const userGuessTextResponse = document.getElementById('guess-response');
 
 const computerCharacter = correctFace(characterArray);
 const questionFeedbackSpan = document.getElementById('question-feedback');
@@ -13,6 +16,7 @@ const guessAmountSpan = document.getElementById('guess-amount');
 let guessAmountRemaining = 10;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
+
 const user = getUser();
 
 
@@ -42,7 +46,6 @@ everyQuestionOption.forEach((questionOption) => {
         guessAmountRemaining--;
         guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
         if (guessAmountRemaining < 1) {
-            user.losses++;
             window.location = '../result-page/index.html';
         }
         const foundFeatureObject = findById(featureArray, questionOption.value);
@@ -55,27 +58,24 @@ everyQuestionOption.forEach((questionOption) => {
 userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = guessAmountRemaining;
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
-
-        user.wins++;
+        const currentUser = findUserByName(userArray, user.name);
+        currentUser.wins++;
+        saveUserArray(userArray);
+        const win = 'Win';
+        saveResults(win);
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
-    guessAmountSpan.textContent = guessAmountRemaining;
+    guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
+    userGuessTextResponse.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
     if (guessAmountRemaining < 1) {
-        user.losses++;
-
-        const win = 'You Win';
-        saveResults(win);
+        const currentUser = findUserByName(userArray, user.name);
+        currentUser.losses++;
+        saveUserArray(userArray);
+        const lose = 'Lose';
+        saveResults(lose);
         window.location = '../result-page/index.html';
       
     
-    } else guessAmountRemaining--;
-    guessAmountSpan.textContent = guessAmountRemaining;
-    if (guessAmountRemaining < 1) {
-        const lost = 'You Lose';
-        saveResults(lost);
-
-        window.location = '../result-page/index.html';
     } 
-
 });
 loadProfile(); 
