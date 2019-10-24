@@ -26,7 +26,7 @@ PAGES
 4. about us page
 
 FEATURES (MVP unless otherwise specified)
-1. save user name and show on game page - caleb
+1. save user name and show on game page - caleb 
 2. computer randomly generates/chooses "correct" face
 3. dynamically generate grid of faces (random = STRETCH)
 4. array of faces with ids and matching descriptive phrases
