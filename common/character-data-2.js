@@ -178,7 +178,7 @@ export const characterArray2 = [{
     tie: false,
     glasses: false,
     freckles: false,
-    earrings: false
+    earrings: true
 }, {
     id:'hazel',
     name:'Hazel',
