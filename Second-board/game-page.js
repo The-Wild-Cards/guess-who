@@ -1,7 +1,7 @@
 import { characterArray2 } from '../common/character-data-2.js';
 import { featureArray2 } from '../second-board/featureArray.js';
 import { createFeature } from '../second-board/create-feature.js';
-import { correctFace, findById, saveComputerCharacter, getUser, saveResults, loadProfile, compareFace, compareQuestionFeatureTwo, findUserByName, saveUserArray, getUserArray } from '../common/utils.js';
+import { correctFace, findById, saveComputerCharacter, getUser, saveResults, compareFace, compareQuestionFeatureTwo, findUserByName, saveUserArray, getUserArray } from '../common/utils.js';
 
 
 
@@ -13,7 +13,6 @@ let guessAmountRemaining = 5;
 const userGuessSubmitButton = document.getElementById('user-guess-submit-button');
 const userGuessText = document.getElementById('user-guess-text');
 const userGuessTextResponse = document.getElementById('guess-response');
-
 const user = getUser();
 
 saveComputerCharacter(computerCharacter);
@@ -50,7 +49,7 @@ userGuessSubmitButton.addEventListener('click', () => {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.wins++;
         saveUserArray(userArray);
-        const win = 'Win';
+        const win = 'You Win';
         saveResults(win);
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
@@ -60,14 +59,13 @@ userGuessSubmitButton.addEventListener('click', () => {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.losses++;
         saveUserArray(userArray);
-        const lose = 'Lose';
+        const lose = 'You Lose';
         saveResults(lose);
         window.location = '../result-page/index.html';
       
     
     } 
 });
-loadProfile(); 
 
 // userGuessSubmitButton.addEventListener('click', () => {
 //     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;

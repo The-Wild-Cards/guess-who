@@ -26,7 +26,7 @@ const addRow = (player) => {
 addRows(javascriptReadableUserList);
 
 
-userDisplayWinOrLose.textContent = getResults(userDisplayWinOrLose);
+userDisplayWinOrLose.textContent = getResults();
 
 const homeSubmitButton = document.getElementById('home');
 const aboutUsButton = document.getElementById('about-us');

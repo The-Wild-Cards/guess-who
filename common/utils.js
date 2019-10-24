@@ -181,11 +181,11 @@ export function getComputerCharacter() {
 
 export function saveResults(winOrLose) {
     const json = JSON.stringify(winOrLose);
-    localStorage.setItem('win-Lose', json);
+    localStorage.setItem('win-lose', json);
 }
 
 export function getResults() {
-    const get = localStorage.getItem('win-Lose');
+    const get = localStorage.getItem('win-lose');
     if (!get) return null;
     const results = JSON.parse(get);
     return results;
