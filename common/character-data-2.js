@@ -208,8 +208,8 @@ export const characterArray2 = [{
     earrings: false
 
 }, {
-    id:'jason',
-    name:'Jason',
+    id:'charlie',
+    name:'Charlie',
     scarf: false,
     hat: false,
     redhair: false,
