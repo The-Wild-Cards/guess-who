@@ -1,4 +1,3 @@
-
 import { characterArray } from '../common/character-data.js';
 import { correctFace, findById, saveComputerCharacter, getUser, saveResults } from '../common/utils.js';
 import { compareQuestionFeature } from '../common/utils.js';
