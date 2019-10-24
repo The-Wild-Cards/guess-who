@@ -1,12 +1,11 @@
 import { characterArray2 } from '../common/character-data-2.js';
-import { compareQuestionFeature } from '../common/utils2.js';
-import { compareFace } from '../common/utils2.js';
 import { featureArray2 } from '../second-board/featureArray.js';
 import { createFeature } from '../second-board/create-feature.js';
-import { loadProfile } from '../common/utils2.js';
-import { correctFace, findById, saveComputerCharacter, getUser, saveResults } from '../common/utils2.js';
+import { correctFace, findById, saveComputerCharacter, getUser, saveResults, loadProfile, compareFace, compareQuestionFeatureTwo, findUserByName, saveUserArray, getUserArray } from '../common/utils.js';
 
 
+
+const userArray = getUserArray();
 const computerCharacter = correctFace(characterArray2);
 const questionFeedbackSpan = document.getElementById('question-feedback');
 const guessAmountSpan = document.getElementById('guess-amount');
@@ -40,28 +39,52 @@ everyQuestionOption.forEach((questionOption) => {
             window.location = '../result-page/index.html';
         }
         const foundFeatureObject = findById(featureArray2, questionOption.value);
-        if (compareQuestionFeature(questionOption.value, computerCharacter)) {
+        if (compareQuestionFeatureTwo(questionOption.value, computerCharacter)) {
             questionFeedbackSpan.textContent = foundFeatureObject.yesMessage;
         } else questionFeedbackSpan.textContent = foundFeatureObject.noMessage;
     });
 });
 userGuessSubmitButton.addEventListener('click', () => {
-    guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
-    if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) {
-        user.wins++;
-        const win = 'You Win';
+    guessAmountSpan.textContent = guessAmountRemaining;
+    if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
+        const currentUser = findUserByName(userArray, user.name);
+        currentUser.wins++;
+        saveUserArray(userArray);
+        const win = 'Win';
         saveResults(win);
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
-    userGuessTextResponse.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
+    userGuessTextResponse.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
     if (guessAmountRemaining < 1) {
-        user.losses++;
-        const lost = 'You Lose';
-        saveResults(lost);
+        const currentUser = findUserByName(userArray, user.name);
+        currentUser.losses++;
+        saveUserArray(userArray);
+        const lose = 'Lose';
+        saveResults(lose);
         window.location = '../result-page/index.html';
-
-
+      
+    
     } 
 });
 loadProfile(); 
+
+// userGuessSubmitButton.addEventListener('click', () => {
+//     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
+//     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) {
+//         user.wins++;
+//         const win = 'You Win';
+//         saveResults(win);
+//         window.location = '../result-page/index.html';
+//     } else guessAmountRemaining--;
+//     userGuessTextResponse.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
+//     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
+//     if (guessAmountRemaining < 1) {
+//         user.losses++;
+//         const lost = 'You Lose';
+//         saveResults(lost);
+//         window.location = '../result-page/index.html';
+
+
+//     } 
+// });

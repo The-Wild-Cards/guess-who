@@ -103,6 +103,50 @@ export const compareQuestionFeature = (questionOptionValue, computerCharacter) =
         return true;
     } else return false;
 };
+export const compareQuestionFeatureTwo = (
+    questionOptionValue,
+    computerCharacter
+) => {
+    if (questionOptionValue === 'hat' && computerCharacter.hat === true) {
+        return true;
+    }
+    if (questionOptionValue === 'scarf' && computerCharacter.scarf === true) {
+        return true;
+    }
+    if (questionOptionValue === 'redhair' && computerCharacter.redhair === true) {
+        return true;
+    }
+    if (questionOptionValue === 'brownhair' && computerCharacter.brownhair === true) {
+        return true;
+    }
+    if (questionOptionValue === 'bald' && computerCharacter.bald === true) {
+        return true;
+    }
+    if (
+        questionOptionValue === 'tie' &&
+        computerCharacter.tie === true
+    ) {
+        return true;
+    }
+    if (
+        questionOptionValue === 'glasses' &&
+        computerCharacter.glasses === true
+    ) {
+        return true;
+    }
+    if (
+        questionOptionValue === 'freckles' &&
+        computerCharacter.freckles === true
+    ) {
+        return true;
+    }
+    if (questionOptionValue === 'earrings' && computerCharacter.earrings === true) {
+        return true;
+    }
+    if (questionOptionValue === 'blackhair' && computerCharacter.blackhair === true) {
+        return true;
+    } else return false;
+};
 
 export function createUser(formData) {
     const user = {
