@@ -1,11 +1,11 @@
 import { characterArray } from '../common/character-data.js';
-import { correctFace, findById, saveComputerCharacter, getUser, saveResults } from '../common/utils.js';
+import { correctFace, findById, saveComputerCharacter, getUser, saveResults, getUserArray, findUserByName, saveUserArray } from '../common/utils.js';
 import { compareQuestionFeature } from '../common/utils.js';
 import { compareFace } from '../common/utils.js';
 import { featureArray } from '../game-page/featureArray.js';
 import { createFeature } from './create-feature.js';
 import { loadProfile } from '../common/utils.js';
-
+const userArray = getUserArray();
 
 const computerCharacter = correctFace(characterArray);
 const questionFeedbackSpan = document.getElementById('question-feedback');
@@ -53,25 +53,24 @@ everyQuestionOption.forEach((questionOption) => {
 
 userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = guessAmountRemaining;
+
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) { 
-
-        window.location = '../result-page/index.html';
-    } else guessAmountRemaining--;
-    guessAmountSpan.textContent = guessAmountRemaining;
-    if (guessAmountRemaining < 1) {
-        user.losses++;
-
-        const win = 'You Win';
+        const currentUser = findUserByName(userArray, user.name);
+        currentUser.wins++;
+        saveUserArray(userArray);
+        const win = 'Win';
         saveResults(win);
         window.location = '../result-page/index.html';
-      
-    
     } else guessAmountRemaining--;
-    guessAmountSpan.textContent = guessAmountRemaining;
-    if (guessAmountRemaining < 1) {
-        const lost = 'You Lose';
-        saveResults(lost);
+     
+    
 
+    if (guessAmountRemaining < 1) {
+        const currentUser = findUserByName(userArray, user.name);
+        currentUser.losses++;
+        saveUserArray(userArray);
+        const win = 'Lose';
+        saveResults(win);
         window.location = '../result-page/index.html';
     } 
 

@@ -55,8 +55,8 @@ export function renderTableRow(userName, wins, losses) {
     tr.appendChild(lossesCell);
 
     const percentageCell = document.createElement('td');
-    const total = Math.round(wins / losses);
-    percentageCell.textContent = total;
+    const total = Math.round(wins / (wins + losses) * 100);
+    percentageCell.textContent = total + '%';
     tr.appendChild(percentageCell);
 
     return tr;
