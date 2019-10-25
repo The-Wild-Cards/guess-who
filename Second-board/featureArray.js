@@ -12,9 +12,9 @@ export const featureArray2 = [{
     noMessage: `Nope, ${user.name}, the mystery person is not wearing a hat.`
 }, {
     id: 'redhair',
-    description: `Red Hair?`,
-    yesMessage: `That's right, ${user.name}, the mystery person has red hair!`,
-    noMessage: `Nope, ${user.name}, the mystery person does not have red hair.`
+    description: `Red/Pink Hair?`,
+    yesMessage: `That's right, ${user.name}, the mystery person has red or pink hair!`,
+    noMessage: `Nope, ${user.name}, the mystery person does not have red or pink hair.`
 }, {
     id: 'brownhair',
     description: `Brown Hair?`,
@@ -27,9 +27,9 @@ export const featureArray2 = [{
     noMessage: `Nope, ${user.name}, the mystery person does not have black hair.`
 }, {
     id: 'bald',
-    description: `Bald?`,
-    yesMessage: `That's right, ${user.name}, the mystery person is bald!`,
-    noMessage: `Nope, ${user.name}, the mystery person is not bald.`
+    description: `Bald/Balding?`,
+    yesMessage: `That's right, ${user.name}, the mystery person is bald/balding!`,
+    noMessage: `Nope, ${user.name}, the mystery person is not bald/balding.`
 }, {
     id: 'tie',
     description: `Tie?`,

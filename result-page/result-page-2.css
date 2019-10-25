@@ -22,7 +22,7 @@ body {
     margin-right: 20%;
     margin-left: 20%;
     margin-top: 5%;
-    grid-template-columns: repeat(2, 600px);
+    grid-template-columns: repeat(2, 540px);
 }
 
 .results {

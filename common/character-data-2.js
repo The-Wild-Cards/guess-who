@@ -192,7 +192,7 @@ export const characterArray2 = [{
     tie: false,
     glasses: true,
     freckles: false,
-    earrings: false
+    earrings: true
 }, {
     id:'charlie',
     name:'Charlie',
@@ -236,12 +236,12 @@ export const characterArray2 = [{
     id:'kevin',
     name:'Kevin',
     scarf: false,
-    hat: true,
+    hat: false,
     redhair: false,
     brownhair: false,
     blackhair: true,
     bald: false,
-    tie: false,
+    tie: true,
     glasses: false,
     freckles: false,
     earrings: false
