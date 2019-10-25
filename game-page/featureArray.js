@@ -23,7 +23,7 @@ export const featureArray = [{
 }, {
     id: 'fin',
     description: ` Fin? `,
-    yesMessage: `Yes ${user.name}, this alien can probably swim with its fin.`,
+    yesMessage: `Yes, ${user.name}, this alien can probably swim with its fin!`,
     noMessage: `This alien hates water, cuz they can't swim with no fin!`
 }, {
     id: 'oneEye',
