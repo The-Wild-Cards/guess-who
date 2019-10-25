@@ -153,6 +153,7 @@ img {
   grid-area: 1 / 1;
 }
 legend {
+  text-shadow: 1px 0px 0px hsla(178, 100%, 28%, 1);
   text-align: center;
   font-size: 1rem;
   background: hsla(289, 100%, 26%, 1);
@@ -180,13 +181,9 @@ legend {
   display: block;
   height: 25px;
 }
-
-
-
 .align {
   text-align: center;
 }
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -204,7 +201,6 @@ legend {
     transition: all 1.5s ease;
     cursor: pointer;
 }
-
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -222,7 +218,6 @@ legend {
   top: 100%;
   left: 50%;
 }
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }

@@ -31,7 +31,11 @@ everyQuestionOption.forEach((questionOption) => {
         guessAmountRemaining--;
         guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
         if (guessAmountRemaining < 1) {
-            user.losses++;
+            const currentUser = findUserByName(userArray, user.name);
+            currentUser.losses++;
+            saveUserArray(userArray);
+            const lose = 'You Lose';
+            saveResults(lose);
             window.location = '../result-page/index.html';
         }
         const foundFeatureObject = findById(featureArray2, questionOption.value);

@@ -84,11 +84,11 @@ input[type=text] {
     cursor: pointer;
     border: 2px solid hsla(0, 0%, 13%, 1); 
     -moz-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
-   -webkit-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
-   box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
+    -webkit-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
+    box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
     -moz-box-shadow: inset 0 0 5px hsla(0, 0%, 8%, 1);
-   -webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 8%, 1);
-   box-shadow: inset 0 0 5px hsla(0, 0%, 8%, 1);
+    -webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 8%, 1);
+    box-shadow: inset 0 0 5px hsla(0, 0%, 8%, 1);
 }
 ::-webkit-input-placeholder {
    color: black;
@@ -170,11 +170,9 @@ img {
 .overlay {
   grid-area: 1 / 1;
 }
-
 .align {
   text-align: center;
 }
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -192,7 +190,6 @@ img {
     transition: all 1.5s ease;
     cursor: pointer;
 }
-
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -210,7 +207,6 @@ img {
   top: 100%;
   left: 50%;
 }
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }

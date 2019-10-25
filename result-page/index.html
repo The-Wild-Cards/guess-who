@@ -10,15 +10,12 @@
     <title>Results</title>
 </head>
 
-<header>
-    <h1>Guess Who?</h1>
-</header>
-
 <body>
+    <header>
+        <h1>Guess Who?</h1>
+    </header>
     <div class="container">
-        <h3>Hello, <span id="name"></span>.</h3>
-
-        <span id="win-or-lose"></span>
+        <h3>That's it for this round, <span id="name"></span>. <span id="win-or-lose"></span></h3>
 
     
         <p>The correct character was... <span id="correct-character"></span>!</p>
@@ -33,11 +30,10 @@
                         <th class="align-left">User</th>
                         <th>Wins</th>
                         <th>Losses</th>
-                        <th>Win/Loss%</th>
+                        <th>Win %</th>
                     </tr>
                 </thead>
                 <tbody>
-        
                 </tbody>
 
 
@@ -48,8 +44,5 @@
           
     <script type="module" src="result-page.js"></script>
     <script type="module" src="../common/utils.js"></script>
-
-    </div>
 </body>
-
 </html>
