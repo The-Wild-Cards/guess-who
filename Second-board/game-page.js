@@ -55,6 +55,8 @@ userGuessSubmitButton.addEventListener('click', () => {
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
 
+
+
     questionFeedbackSpan.textContent = 'Sadly your guess was wrong. Try again, ' + user.name + '!';
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
     if (guessAmountRemaining < 1) {

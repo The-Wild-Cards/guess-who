@@ -292,7 +292,7 @@ export const characterArray2 = [{
     redhair: false,
     brownhair: false,
     blackhair: false,
-    bald: false,
+    bald: true,
     tie: false,
     glasses: true,
     freckles: false,
