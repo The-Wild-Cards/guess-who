@@ -34,7 +34,7 @@ everyQuestionOption.forEach((questionOption) => {
             const currentUser = findUserByName(userArray, user.name);
             currentUser.losses++;
             saveUserArray(userArray);
-            const lose = 'You Lose';
+            const lose = 'You Lose!';
             saveResults(lose);
             window.location = '../result-page/index.html';
         }
@@ -50,18 +50,18 @@ userGuessSubmitButton.addEventListener('click', () => {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.wins++;
         saveUserArray(userArray);
-        const win = 'You Win';
+        const win = 'You Win!';
         saveResults(win);
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
 
-    questionFeedbackSpan.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
+    questionFeedbackSpan.textContent = 'Sadly your guess was wrong. Try again, ' + user.name + '!';
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
     if (guessAmountRemaining < 1) {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.losses++;
         saveUserArray(userArray);
-        const lose = 'You Lose';
+        const lose = 'You Lose!';
         saveResults(lose);
         window.location = '../result-page/index.html';
     } 
