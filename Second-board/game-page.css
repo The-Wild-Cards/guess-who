@@ -204,7 +204,7 @@ legend {
 }
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 500px;
   border: black solid 5px;
   color:hsla(289, 100%, 26%, 1);
   text-align: center;
