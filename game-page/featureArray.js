@@ -50,7 +50,7 @@ export const featureArray = [{
     id: 'spots',
     description: `Spots?`,
     yesMessage: `Maybe it's contagious, maybe it's not, but this alien has spots!`,
-    noMessage: `This alien do not have any spots, ${user.name}.`
+    noMessage: `This alien does not have any spots, ${user.name}.`
 }, {
     id: 'ears',
     description: `Ears?`,
