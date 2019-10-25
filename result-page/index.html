@@ -13,33 +13,35 @@
 <body>
     <header>
         <h1>Guess Who?</h1>
+        <div class="buttons">
+            <button id="home">Play Again</button>
+            <button id="about-us">About Us</button>
+        </div>
     </header>
     <div class="container">
+    <div class="results">
         <h3>That's it for this round, <span id="name"></span>. <span id="win-or-lose"></span></h3>
 
     
-        <p>The correct character was... <span id="correct-character"></span>!</p>
+        <p>The mystery character was... <span id="correct-character"></span>!</p>
         <img id="correct-face" src="">
         <br>
+    </div>
+    <div class="leaderboard">
+        <h2>Leaderboard</h2>
 
-            <h3>Leaderboard:</h3>
-
-            <table id="leaderboard">
-                <thead>
-                    <tr>
-                        <th class="align-left">User</th>
-                        <th>Wins</th>
-                        <th>Losses</th>
-                        <th>Win %</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-
-
-    <div class="buttons">
-        <button id="home">Home</button>
-        <button id="about-us">About Us</button>
+        <table id="leaderboard">
+             <thead>
+                <tr>
+                    <th class="align-left">User</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Win %</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+    </div>
     </div>
           
     <script type="module" src="result-page.js"></script>
