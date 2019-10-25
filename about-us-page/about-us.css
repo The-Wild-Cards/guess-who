@@ -37,7 +37,6 @@ body {
   align-items: center;
   justify-items: center;
   margin: auto;
-   width: 250px;
 }
 .overlay {
   display: flex;
@@ -62,7 +61,7 @@ h2 {
 }
 p{
   font-size: 26px;
-  font-weight: lighter;
+  font-weight: 100;
 }
 .content {
   display: flex;
