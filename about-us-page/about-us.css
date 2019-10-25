@@ -10,7 +10,10 @@ body {
   background-color: teal;
 }
 .button {
-  margin-top: 50px;
+  position: absolute;
+  bottom: 50px;
+  left: 47.5%;
+  right: 60%;
   border-radius: 15px;
   font-size: 30px;
   background-color: goldenrod;
@@ -22,7 +25,7 @@ body {
 }
 .description{
   height: 200px;
-  width: 250px;
+  width: 280px;
   text-align: center;
 }
 #grid-board {
@@ -58,9 +61,16 @@ body {
 }
 h2 {
     font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
-p{
-  font-size: 26px;
+
+img#pic {
+  margin-left: 15px;
+}
+
+p {
+  font-size: 25px;
   font-weight: 100;
 }
 .content {
@@ -95,7 +105,9 @@ p{
 }
 #btn5 {
  justify-content: center;
-}      
+}  
+
+
 footer {  
   margin-top: 250px;
   left: 50%;

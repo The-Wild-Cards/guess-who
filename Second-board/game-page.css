@@ -162,7 +162,8 @@ img {
   grid-area: 1 / 1;
 }
 legend {
-  text-shadow: 1px 0px 0px hsla(178, 100%, 28%, 1);
+  color: white;
+  text-shadow: 1px 1px 1px black;
   text-align: center;
   font-size: 1rem;
   background: hsla(289, 100%, 26%, 1);
