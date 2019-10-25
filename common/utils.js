@@ -61,12 +61,10 @@ export function renderTableRow(userName, wins, losses) {
 
     return tr;
 }
-
 export function compareFace(guessedFace, correctFaceId) {
     if (guessedFace === correctFaceId) {
         return true;
-    } 
-    
+    }   
 }
 export const compareQuestionFeature = (questionOptionValue, computerCharacter) => {
     if (questionOptionValue === 'horns' && computerCharacter.horns === true) {
@@ -156,25 +154,20 @@ export function createUser(formData) {
     };
     return user;
 }
-
-
 export function saveComputerCharacter(computerCharacter) {
     const json = JSON.stringify(computerCharacter);
     localStorage.setItem('computer-character', json);
 }
-
 export function getComputerCharacter() {
     const getJsonFace = localStorage.getItem('computer-character');
     if (!getJsonFace) return null;
     const computerFace = JSON.parse(getJsonFace);
-    return computerFace.id;
+    return computerFace;
 }
-
 export function saveResults(winOrLose) {
     const json = JSON.stringify(winOrLose);
     localStorage.setItem('win-lose', json);
 }
-
 export function getResults() {
     const get = localStorage.getItem('win-lose');
     if (!get) return null;

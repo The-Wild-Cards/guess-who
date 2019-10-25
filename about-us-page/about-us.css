@@ -5,9 +5,11 @@ h1 {
     font-size: 50px;
 }
 body {
+
   text-align: center;
   justify-content: center;
   background-color: green;
+
 }
 .button {
   margin-top: 50px;
@@ -16,9 +18,11 @@ body {
   background-color: goldenrod;
   border: 2px solid black;
 }
+
 .button:hover {
   cursor: pointer;
   background-color: white;
+
 }
 .description{
   height: 200px;
