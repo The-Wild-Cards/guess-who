@@ -1,5 +1,7 @@
-import { getComputerCharacter, renderTableRow, getResults } from '../common/utils.js';
+
+import { getComputerCharacter, renderTableRow, getResults, getUser } from '../common/utils.js';
 const USER_LIST_KEY = 'user-array';
+const helloUser = document.getElementById('name');
 const userDisplayWinOrLose = document.getElementById('win-or-lose');
 const computerCharacter = getComputerCharacter();
 const computerCharacterImage = document.getElementById('correct-face');
@@ -20,6 +22,10 @@ const addRow = (player) => {
     tableElement.appendChild(row);
 };
 addRows(javascriptReadableUserList);
+
+let user = getUser();
+helloUser.textContent = user.name;
+
 userDisplayWinOrLose.textContent = getResults();
 const homeSubmitButton = document.getElementById('home');
 const aboutUsButton = document.getElementById('about-us');

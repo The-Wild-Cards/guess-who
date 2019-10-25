@@ -52,17 +52,17 @@ userGuessSubmitButton.addEventListener('click', () => {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.wins++;
         saveUserArray(userArray);
-        const win = 'You Win';
+        const win = 'You Win!';
         saveResults(win);
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
-    questionFeedbackSpan.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
+    questionFeedbackSpan.textContent = 'Sadly, your guess was wrong. Try again, ' + user.name + '!';
     if (guessAmountRemaining < 1) {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.losses++;
         saveUserArray(userArray);
-        const lose = 'You Lose';
+        const lose = 'You Lose!';
         saveResults(lose);
         window.location = '../result-page/index.html';
     }
