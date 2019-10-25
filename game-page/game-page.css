@@ -192,7 +192,7 @@ img {
 }
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 500px;
   border: black solid 5px;
   color: goldenrod;
   text-align: center;
