@@ -123,6 +123,7 @@ img {
   font-size: 0.8em;
   height: 150px;
   width: 150px;
+  padding: 15px 10px;
   color: transparent;
   transition: all 5s ease;
 }
