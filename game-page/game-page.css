@@ -3,18 +3,19 @@
   background: hsla(199, 100%, 25%, 1);
   font-family: 'Acme', sans-serif;
 }
+body html {
+  margin: 0;
+  padding: 0;
+  background: hsla(199, 100%, 25%, 1);
+}
 #outputs {
+  font-size: 1.5rem;
   text-align: center;
   padding-bottom: 5px;
 }
-.selected {
-  color: transparent;
-}
-#name-message {
-  height: 20px;
-  text-transform: capitalize;
-}
 #guess-amount {
+  font-size: 1.3rem;
+  font-family: 'PT Sans', sans-serif;
   color: hsla(342, 86%, 32%, 1);
   text-shadow: 1px 1px 2px black;
   display: block;
@@ -27,9 +28,9 @@
   height: 25px;
 }
 #user-guess-submit-button {
-  height: 30px;
+  height: 33px;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-left: 10px;
   border-radius: 3px;
   color: black;
@@ -40,7 +41,7 @@
     box-shadow: inset 0 0 10px hsla(0, 0%, 8%, 1);
     transition: all 1.5s ease;
 }
-#user-guess-submit-button:hover {
+#user-guess-submit-button:hover, .tooltip:hover {
   background: linear-gradient(to right, goldenrod,hsla(199, 100%, 25%, 1), goldenrod);
   cursor: pointer;
 }
@@ -49,34 +50,29 @@ section {
 }
 #intro {
   text-align: center;
-  font-size: 2.5rem;
-  text-shadow: 4px 4px 5px hsla(0, 0%, 13%, 1);
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 5px rgb(20, 20, 20);
   color: goldenrod;
-}
-body html {
-  margin: 0;
-  padding: 0;
-  background: hsla(199, 100%, 25%, 1);
 }
 .feature-label {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 3px 10px;
   color: goldenrod;
-  box-shadow: 0 0 1px 1px hsla(0, 0%, 13%, 1); 
+  box-shadow: 0 0 1px 1px rgb(20, 20, 20); 
   border-radius: 1px;
-  text-shadow: 4px 4px 5px hsla(0, 0%, 13%, 1);
+  text-shadow: 4px 4px 5px rgb(20, 20, 20);
   transition: all 1s ease-in;
 }
 .feature-label:hover {
-  color: hsla(0, 0%, 13%, 1);
+  color: rgb(20, 20, 20);
   cursor: pointer;
 }
 input[type=radio] {
     display: none;
 }
-input[type=text] {
+input[type=text], .tooltip {
     background: linear-gradient(to right, hsla(199, 100%, 25%, 1), goldenrod,hsla(199, 100%, 25%, 1));
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     outline: none;
     padding: 6px; 
@@ -94,12 +90,6 @@ input[type=text] {
    color: black;
 }
 :-moz-placeholder { 
-   color: black;  
-}
-::-moz-placeholder {  
-   color: black;  
-}
-:-ms-input-placeholder {  
    color: black;  
 }
 nav {
@@ -138,15 +128,16 @@ img {
   display: flex;
   justify-content: center;
   align-content: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
   height: 150px;
   width: 150px;
-  padding: 8px 3px 1px 3px;
+  padding-top: 5px;
   color: transparent;
   transition: all 5s ease;
 }
 .content:hover {
   color: goldenrod;
+  text-shadow: 1px 1px 0px black;
 }
 .overlay {
   display: flex;
@@ -182,19 +173,14 @@ img {
   padding: 5px;
   border-radius: 3px;
   color: black;
-  height: 30px;
-  background: linear-gradient(to right, hsla(199, 100%, 25%, 1), goldenrod, hsla(199, 100%, 25%, 1));
-  -moz-box-shadow: inset 0 0 10px hsla(0, 0%, 8%, 1);
-  -webkit-box-shadow: inset 0 0 10px hsla(0, 0%, 8%, 1);
-    box-shadow: inset 0 0 10px hsla(0, 0%, 8%, 1);
-    transition: all 1.5s ease;
-    cursor: pointer;
+  height: 33px;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
   border: black solid 5px;
   color: goldenrod;
+  text-shadow: 1px 1px 0 black;
   text-align: center;
   border-radius: 6px;
   min-width: 300px;

@@ -55,7 +55,7 @@ userGuessSubmitButton.addEventListener('click', () => {
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
 
-    questionFeedbackSpan.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
+    questionFeedbackSpan.textContent = `Sadly your guess was wrong, try again ${user.name}`;
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
     if (guessAmountRemaining < 1) {
         const currentUser = findUserByName(userArray, user.name);
