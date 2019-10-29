@@ -1,5 +1,7 @@
 import { getUser } from '../common/utils.js';
 let user = getUser();
+
+// nice metadata!
 export const featureArray = [{
     id: 'nose',
     description: `Nose?`,

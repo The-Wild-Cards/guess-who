@@ -4,8 +4,9 @@ export function correctFace(characterArray) {
 }
 export function findById(characterArray, id) {
     for (let i = 0; i < characterArray.length; i++) {
+        // in the future, this will be a .find array method
         const character = characterArray[i];
-        if (character.id === id) { 
+        if (character.id === id) {
             return character;
         }
     }
@@ -20,8 +21,9 @@ export function saveUser(user) {
 }
 export const findUserByName = (userArray, userName) => {
     for (let i = 0; i < userArray.length; i++) {
+        // in the future, this will be a .find array method
         const user = userArray[i];
-        if (user.name === userName) { 
+        if (user.name === userName) {
             return user;
         }
     }
@@ -64,9 +66,14 @@ export function renderTableRow(userName, wins, losses) {
 export function compareFace(guessedFace, correctFaceId) {
     if (guessedFace === correctFaceId) {
         return true;
-    }   
+    }
 }
 export const compareQuestionFeature = (questionOptionValue, computerCharacter) => {
+    /*
+    this whole chain of ifs could be replaced with a hash map and dynamic object property:
+
+    return computerCharacter[questionOptionValue] // resolves to true or false
+    */
     if (questionOptionValue === 'horns' && computerCharacter.horns === true) {
         return true;
     }
@@ -105,6 +112,12 @@ export const compareQuestionFeatureTwo = (
     questionOptionValue,
     computerCharacter
 ) => {
+    /*
+this whole chain of ifs could be replaced with a hash map and dynamic object property:
+
+return computerCharacter[questionOptionValue] // resolves to true or false
+*/
+
     if (questionOptionValue === 'hat' && computerCharacter.hat === true) {
         return true;
     }
@@ -149,8 +162,8 @@ export const compareQuestionFeatureTwo = (
 export function createUser(formData) {
     const user = {
         name: formData.get('name'),
-        wins:0,
-        losses:0,
+        wins: 0,
+        losses: 0,
     };
     return user;
 }
