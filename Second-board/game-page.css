@@ -34,6 +34,20 @@ nav {
   font-size: 1.3rem;
   font-family: 'PT Sans', sans-serif;
 }
+@media only screen and (max-device-width: 667px) {
+  #user-guess-submit-button {
+    height: 2rem;
+    width: 4rem;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-device-width: 667px) {
+  #user-guess-text {
+    height: 2rem;
+    width: 6rem;
+    font-size: 0.8rem;
+  }
+}
 #question-feedback {
   display: block;
   font-size: 1.5rem;
@@ -60,6 +74,7 @@ background: linear-gradient(to right, hsla(199, 100%, 25%, 1),hsla(300, 100%, 35
 }
 section {
   padding: 20px;
+  margin-top: 2rem;
 }
 #intro {
   text-align: center;
@@ -111,6 +126,20 @@ input[type=text] {
   grid-template-rows: repeat(4, 1fr);
   gap: 2px;
   transform-style: preserve-3d;
+}
+
+@media screen and (max-width: 780px) {
+  #grid-board {
+    // width: 85vw;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 550px) {
+  #grid-board {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1rem;
+  }
 }
 .container {
   display: grid;
