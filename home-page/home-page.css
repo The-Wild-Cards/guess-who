@@ -83,12 +83,12 @@ box-shadow: 1px 1px 2px 12px hsla(132, 100%, 57%, 1);
 }
 input[type=text] {
     background: linear-gradient(to right, hsla(25, 100%, 28%, 1), hsla(156, 100%, 35%, 1),hsla(199, 100%, 25%, 1),hsla(300, 100%, 35%, 1));
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     border: 2px solid black;
     outline: none;
     padding: 10px; 
-    width: 225px;
+    width: 355px;
     height: 40px;
     border-radius: 5px;
 }
@@ -107,8 +107,9 @@ input[type=text] {
 @media only screen and (max-device-width: 667px)  {
   input[type=text] {
     height: 1rem;
-    width: 10rem;
+    width: 18.2rem;
     padding: 1rem;
+    font-size: 1.2rem;
   }
 }
 input[type=text]:hover {
