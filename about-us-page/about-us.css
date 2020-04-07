@@ -3,19 +3,15 @@
 }
 h1 {
     font-size: 50px;
+    text-align: center;
 }
 body {
-  text-align: center;
-  justify-content: center;
   background-color: teal;
 }
-.button {
-  position: absolute;
-  bottom: 50px;
-  left: 47.5%;
-  right: 60%;
+#HomeButton {
   border-radius: 15px;
   font-size: 30px;
+  margin-bottom: 5px;
   background-color: goldenrod;
   border: 2px solid black;
 }
@@ -34,6 +30,13 @@ body {
   grid-template-rows: repeat(1, 1fr);
   gap: 2px;
   transform-style: preserve-3d;
+}
+@media screen and (max-width: 550px) {
+  #grid-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
 }
 .container {
   display: grid;
@@ -108,7 +111,3 @@ p {
 }  
 
 
-footer {  
-  margin-top: 250px;
-  left: 50%;
-}

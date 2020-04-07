@@ -176,21 +176,6 @@ nav {
     grid-gap: 1rem;
   }
 }
-// @media screen and (min-width: 1040px) {
-//   #grid-board {
-//     grid-template-columns: repeat(4, 1fr);
-//   }
-// }
-// @media screen and (min-width: 1280px) {
-//   #grid-board {
-//     grid-template-columns: repeat(5, 1fr);
-//   }
-// }
-// @media screen and (min-width: 1640px) {
-//   #grid-board {
-//     grid-template-columns: repeat(6, 1fr);
-//   }
-// }
 .container {
   display: grid;
   margin: auto;
@@ -243,6 +228,7 @@ img {
 }
 .align {
   text-align: center;
+  padding-bottom: .7rem;
 }
 .tooltip {
   position: relative;
