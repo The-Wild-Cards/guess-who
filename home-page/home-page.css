@@ -9,23 +9,28 @@ body html{
     display: flex;
     height: 100vh;
 }
-form {
-display: grid;
-padding-top: 15px;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: 10fr 1fr;
-}
-#people-game { 
-    grid-area: 1 / 1 / 2 / 2;
-}
-#alien-game { 
-    grid-area: 1 / 2 / 2 / 3; 
-}
-#name-input { 
-    grid-area: 2 / 1 / 3 / 3;
-    height: 30px;
-    margin-left: 15px;
-    margin-top: 8px;
+// form {
+// display: grid;
+// padding-top: 15px;
+// grid-template-columns: repeat(2, 1fr);
+// grid-template-rows: 10fr 1fr;
+// }
+// .game-grid {
+//         display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+//   grid-gap: 1rem; 
+//  list-style: none;
+//  margin: 0 auto;
+//  padding: 0;
+// }
+// #people-game { 
+//     grid-area: 1 / 1 / 2 / 2;
+// }
+// #alien-game { 
+//     grid-area: 1 / 2 / 2 / 3; 
+// }
+#name{
+    margin: 1rem;
 }
 header {
     padding: 5px;
@@ -33,20 +38,30 @@ header {
     font-size: 60px;
     text-shadow: 4px 4px 4px goldenrod;
 }
-img {
+.game-board{
     display: flex;
-    height: 345px;
-    width: 525px;
+    height: 35rem;
+    width: 50rem;
     padding: 8px;
-    margin: 5px;
+    // margin: 5px;
     justify-content: center;
-    border: 2px solid hsla(0, 0%, 13%, 1); 
+    border: 10px solid transparent;
     -moz-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
--webkit-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
+    -webkit-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
+    box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
     -moz-box-shadow: inset 0 0 20px hsla(0, 0%, 8%, 1);
--webkit-box-shadow: inset 0 0 20px hsla(0, 0%, 8%, 1);
+    -webkit-box-shadow: inset 0 0 20px hsla(0, 0%, 8%, 1);
     box-shadow: inset 0 0 20px hsla(0, 0%, 8%, 1);
+
+
+
+}
+@media only screen and (max-device-width: 667px)  {
+  .game-board {
+    height: 15rem;
+    width: 20rem;
+    padding: 1rem;
+  }
 }
 img:hover{
     cursor: pointer;
@@ -57,11 +72,6 @@ nav {
     align-items: flex-start;
     height: 70px;
 }
-#board {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 input[type=radio] {
     cursor: pointer;
     display: none;
@@ -71,23 +81,16 @@ padding:0px;
 border-radius: 10px;
 box-shadow: 1px 1px 2px 12px hsla(132, 100%, 57%, 1);
 }
-
 input[type=text] {
     background: linear-gradient(to right, hsla(25, 100%, 28%, 1), hsla(156, 100%, 35%, 1),hsla(199, 100%, 25%, 1),hsla(300, 100%, 35%, 1));
     font-size: 1rem;
     text-align: center;
+    border: 2px solid black;
     outline: none;
     padding: 10px; 
     width: 225px;
     height: 40px;
     border-radius: 5px;
-    border: 2px solid hsla(0, 0%, 13%, 1); 
-    -moz-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
-    -webkit-box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
-    box-shadow: inset 0 0 10px hsla(0, 0%, 32%, 1);
-    -moz-box-shadow: inset 0 0 5px hsla(0, 0%, 8%, 1);
-    -webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 8%, 1);
-    box-shadow: inset 0 0 5px hsla(0, 0%, 8%, 1);
 }
 ::-webkit-input-placeholder {
     color: black;
@@ -101,32 +104,33 @@ input[type=text] {
 :-ms-input-placeholder {   
     color: black;  
 }
+@media only screen and (max-device-width: 667px)  {
+  input[type=text] {
+    height: 1rem;
+    width: 10rem;
+    padding: 1rem;
+  }
+}
 input[type=text]:hover {
     cursor: pointer;
 }
 h4 {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    padding-top: 5px;
     text-align: center;
     font-size: 60px;
     text-shadow: 4px 4px 4px goldenrod;
     font-size: 1.5rem;
-    margin: 1%;
 }
 label {
     display: flex;
     justify-content: center;
 }
 section {
-    text-align: center;
-    margin: 10px auto;
-    padding: 0px 60px;
+    margin: 0 auto;
+    padding: 2rem 5rem;
 }
 button {
     margin-top: 10px;
-    margin-left: 560px;
+    // margin-left: 560px;
     height: 30px;
     width: 40px;
     border-radius: 100%;

@@ -6,50 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="result-page.css">
+    <link rel="stylesheet" href="result-page-2.css">
     <title>Results</title>
 </head>
 
-<header>
-    <h1>Guess Who?</h1>
-</header>
-
 <body>
+    <header>
+        <h1>Guess Who?</h1>
+        <div class="buttons">
+            <button id="home">Play Again</button>
+            <button id="about-us">About Us</button>
+        </div>
+    </header>
     <div class="container">
-        <h3>Hello, <span id="name"></span></h3>
-
-        <span id="win-or-lose"></span>
+    <div class="results">
+        <h3>That's it for this round, <span id="name"></span>. <span id="win-or-lose"></span></h3>
 
     
-        <p>The correct character was <span id="correct-character"></span></p>
+        <p>The mystery character was... <span id="correct-character"></span>!</p>
         <img id="correct-face" src="">
         <br>
-        <div class="leaderboard">
-            <h3>Leaderboard:</h3>
+    </div>
+    <div class="leaderboard">
+        <h2>Leaderboard</h2>
 
-            <table id="leaderboard">
-                <thead>
-                    <tr>
-                        <th class="align-left">User</th>
-                        <th>Wins</th>
-                        <th>Losses</th>
-                        <th>Win/Loss%</th>
-                    </tr>
-                </thead>
-                <tbody>
-        
-                </tbody>
-
-        </div>
-<button id="home">Home</button>
-    <br>
-    <br>
-  <button id="about-us">About Us</button>
+        <table id="leaderboard">
+             <thead>
+                <tr>
+                    <th class="align-left">User</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Win %</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+    </div>
+    </div>
           
     <script type="module" src="result-page.js"></script>
     <script type="module" src="../common/utils.js"></script>
-
-    </div>
 </body>
-
 </html>

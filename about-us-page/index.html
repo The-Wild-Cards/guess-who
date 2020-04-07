@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,37 +10,82 @@
 </head>
 <body>
     <h1>About Us</h1>
-    <div class="contain">
-        <div class="alien">
-            <img class="image" src="../assets/about-us/matt.png">
-            <h3 class="name">Matt Munch</h3>
-            <p>Matt is from Kamiah, Idaho. When he's not at a farmer's market with the Fiancé, he is either drinking beer with buddies, shooting hoops, or playing video games.</p>
-        </div>
-        <div class="alien">
-            <img class="image" src="../assets/about-us/nikki.png">
-            <h3 class="name">Nikki Sato</h3>
-            <p>Nikki is from Portland, during her free time is often spent either sleeping, 
-            looking at corgi photos, or taking photos around Portland. Spends the day thinking about coding, spends the night thinking about coding. If it isn't obvious by now I love corgis. </p>
-        </div>
-        <div class="alien">
-            <img class="image" src="../assets/about-us/eve2.png">
-            <h3 class="name">Eve Stockstill</h3>
-            <p>Eve is from Portland, Oregon. Her free time is spent spoiling her dog and is obsessed with finding her the perfect toy. When the dog is tired and the coding is done you can find her hustling around a pool table.</p>
-        </div>
-        <div class="alien">
-            <img class="image" src="../assets/about-us/caleb.png">
-            <h3 class="name">Caleb Pendergraft</h3>
-            <p>Caleb is from Portland, Oregon. When not learning to code he can be found walking his dog around Columbia Park, listening to history podcasts, or having livly arguements with his roommate</p>
-        </div>
-        <div class="alien">
-            <img class="image" src="../assets/about-us/brittany.png">
-            <h3 class="name">Brittany Houtz</h3>
-            <p>Brittany lives in Portland, Oregon. When not in front of a computer screen, you can find her reading with
-                her cat and a cup of coffee, training in aerial circus arts, or donating her last dollar to Hollywood
-                Theatre.</p>
+    <div id="grid-board">
+        <div class="container">
+            <div id="matt" class="content">
+                <img class="picture" src="../assets/personal-us/matt2.jpg" alt="human being">
+            </div>
+            <div id="btn1" class="overlay"><img id="pic" src="../assets/about-us/matt.png" alt="cartoon alien">
+                <p class="side-name">Matt</p>
+            </div>
+            <div class="description">
+                <h2>Matt Munch</h2>
+                <p>Matt is from Kamiah, Idaho. When he's not at a farmer's market with the Fiancé, he is either drinking
+                    beer with buddies, shooting hoops, or playing video games.</p>
         </div>
     </div>
+    <div class="container">
+        <div class="content">
+            <img src="../assets/personal-us/Nikki.jpg">
+        </div>
+            <div id="btn2" class="overlay">
+                <img id="pic" class="pic" src="../assets/about-us/nikki.png">
+                <p class="side-name">Nikki</p>
+            </div>
+            <div class="description">
+                <h2 class="name">Nikki Sato</h2>
+                <p>Nikki is from Portland, during her free time is often spent either sleeping,
+                    looking at corgi photos, or taking photos around Portland. Spends the day thinking about coding,
+                    spends
+                    the night thinking about coding. If it isn't obvious by now I love corgis. </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+             <img class = "width" src="../assets/personal-us/eve.jpeg">
+        </div>
+            <div id="btn3" class="overlay"><img id="pic" src="../assets/about-us/eve2.png" alt="cartoon alien">
+                <p class="side-name">Eve</p>
+            </div>
+            <div class="description">
+                <h2>Eve Stockstill</h2>
+                <p class="description">Eve is from Portland, Oregon. Her free time is spent spoiling her dog and is
+                    obsessed with finding
+                    her the perfect toy. When the dog is tired and the coding is done you can find her hustling around a
+                    pool table.</p>
+            </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <img src="../assets/personal-us/caleb2.jpg">
+        </div>
+            <div id="btn4" class="overlay"><img id="pic" src="../assets/about-us/caleb.png" alt="cartoon alien">
+                <p class="side-name">Caleb</p>
+            </div>
+            <div class="description">
+                <h2>Caleb Pendergraft</h2>
+                <p>Caleb is from Portland, Oregon. When not learning to code he can be found walking his dog around
+                    Columbia Park, listening to history podcasts, or having lively arguments with his roommate</p>
+         </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <img src="../assets/personal-us/brittany2.jpg">
+        </div>
+            <div id="btn5" class="overlay"><img id="pic" src="../assets/about-us/brittany.png" alt="cartoon alien">
+                <p class="side-name">Brittany</p>
+            </div>
+            <div class="description">
+                <h2 class="name">Brittany Houtz</h2>
+                <p>Brittany lives in Portland, Oregon. When not in front of a computer screen, you can find her reading
+                    with her cat and a cup of coffee, training in aerial circus arts, or donating her last dollar to
+                    Hollywood Theatre.</p>
+            </div>
+        </div>
+    </div>
+<footer> 
     <button id="HomeButton" class="button">Home</button>
+</footer>
     <script type="module" src="about-us.js"></script>
 </body>
 </html>

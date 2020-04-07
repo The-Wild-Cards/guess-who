@@ -1,6 +1,6 @@
 import { characterArray2 } from '../common/character-data-2.js';
-import { featureArray2 } from '../second-board/featureArray.js';
-import { createFeature } from '../second-board/create-feature.js';
+import { featureArray2 } from '../Second-board/featureArray.js';
+import { createFeature } from '../Second-board/create-feature.js';
 import { correctFace, findById, saveComputerCharacter, getUser, saveResults, compareFace, compareQuestionFeatureTwo, findUserByName, saveUserArray, getUserArray } from '../common/utils.js';
 
 const userArray = getUserArray();
@@ -31,7 +31,11 @@ everyQuestionOption.forEach((questionOption) => {
         guessAmountRemaining--;
         guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
         if (guessAmountRemaining < 1) {
-            user.losses++;
+            const currentUser = findUserByName(userArray, user.name);
+            currentUser.losses++;
+            saveUserArray(userArray);
+            const lose = 'You Lose!';
+            saveResults(lose);
             window.location = '../result-page/index.html';
         }
         const foundFeatureObject = findById(featureArray2, questionOption.value);
@@ -46,18 +50,20 @@ userGuessSubmitButton.addEventListener('click', () => {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.wins++;
         saveUserArray(userArray);
-        const win = 'You Win';
+        const win = 'You Win!';
         saveResults(win);
         window.location = '../result-page/index.html';
     } else guessAmountRemaining--;
 
-    questionFeedbackSpan.textContent = 'Sadly your guess was wrong, try again ' + user.name + '.';
+
+
+    questionFeedbackSpan.textContent = 'Sadly your guess was wrong. Try again, ' + user.name + '!';
     guessAmountSpan.textContent = `${guessAmountRemaining} guesses left!`;
     if (guessAmountRemaining < 1) {
         const currentUser = findUserByName(userArray, user.name);
         currentUser.losses++;
         saveUserArray(userArray);
-        const lose = 'You Lose';
+        const lose = 'You Lose!';
         saveResults(lose);
         window.location = '../result-page/index.html';
     } 
