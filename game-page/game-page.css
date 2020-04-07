@@ -13,6 +13,14 @@ body html {
   text-align: center;
   padding-bottom: 5px;
 }
+@media only screen and (max-device-width: 667px) {
+  #outputs {
+    font-size: 1rem;
+  text-align: center;
+  padding: 30px 0 20px 0;
+  margin-top: 5px;
+  }
+}
 #guess-amount {
   font-size: 1.3rem;
   font-family: 'PT Sans', sans-serif;
@@ -21,7 +29,7 @@ body html {
   display: block;
   height: 15px;
   text-align: center;
-  padding-bottom: 10px;
+  padding: 10px 0 5px 0;
 }
 #question-feedback {
   display: block;
@@ -31,7 +39,6 @@ body html {
   height: 33px;
   outline: none;
   font-size: 1.2rem;
-  // margin-left: 10px;
   border-radius: 3px;
   color: black;
   border: 2px solid hsla(0, 0%, 13%, 1);
