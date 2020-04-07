@@ -24,25 +24,40 @@ nav {
   text-align: center;
   padding-bottom: 10px;
 }
-@media only screen and (max-device-width: 667px) {
+@media only screen and (max-width: 667px) {
   #outputs {
     font-size: 1rem;
-    text-align: center;
-    padding: 30px 0 20px 0;
-    margin-top: 5px;
+  text-align: center;
+  padding: 40px 0 20px 0;
   }
 }
 #guess-amount {
-  color: hsla(312, 100%, 18%, 1);
+  font-size: 1.3rem;
+  font-family: 'PT Sans', sans-serif;
+  color: hsla(342, 86%, 32%, 1);
   text-shadow: 1px 1px 2px black;
   display: block;
   height: 15px;
   text-align: center;
   padding: 10px 0 5px 0;
-  font-size: 1.3rem;
-  font-family: 'PT Sans', sans-serif;
 }
-@media only screen and (max-device-width: 667px) {
+@media only screen and (max-width: 667px) {
+  #guess-amount{
+    font-size: 1rem;
+  text-align: center;
+  margin-top: 35px
+  }
+}
+#question-feedback {
+  display: block;
+  height: 25px;
+}
+@media only screen and (max-width: 667px) {
+  #question-feedback {
+    padding-top: 22px;
+  }
+}
+@media only screen and (max-width: 667px) {
   #user-guess-submit-button {
     height: 2rem;
     width: 4rem;

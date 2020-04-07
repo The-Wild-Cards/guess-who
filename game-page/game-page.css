@@ -11,14 +11,13 @@ body html {
 #outputs {
   font-size: 1.5rem;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 25px;
 }
-@media only screen and (max-device-width: 667px) {
+@media only screen and (max-width: 667px) {
   #outputs {
     font-size: 1rem;
   text-align: center;
-  padding: 30px 0 20px 0;
-  margin-top: 5px;
+  padding: 40px 0 20px 0;
   }
 }
 #guess-amount {
@@ -31,9 +30,41 @@ body html {
   text-align: center;
   padding: 10px 0 5px 0;
 }
+@media only screen and (max-width: 667px) {
+  #guess-amount{
+    font-size: 1rem;
+  text-align: center;
+  margin-top: 35px
+  }
+}
 #question-feedback {
   display: block;
   height: 25px;
+}
+@media only screen and (max-width: 667px) {
+  #question-feedback {
+    padding-top: 22px;
+  }
+}
+@media only screen and (max-width: 667px) {
+  #user-guess-submit-button {
+    height: 2rem;
+    width: 4rem;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-device-width: 667px) {
+  #user-guess-text {
+    height: 2rem;
+    width: 6rem;
+    font-size: 0.8rem;
+  }
+}
+#question-feedback {
+  display: block;
+  font-size: 1.5rem;
+  height: 25px;
+  padding-bottom: 10px;
 }
 #user-guess-submit-button {
   height: 33px;
@@ -100,7 +131,7 @@ body html {
   text-shadow: 4px 4px 5px rgb(20, 20, 20);
   transition: all 1s ease-in;
 }
-@media only screen and (max-device-width: 667px) {
+@media only screen and (max-width: 667px) {
   .feature-label {
     font-size: 1.5rem;
     padding: 0.3rem;
