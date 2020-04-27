@@ -12,6 +12,7 @@ correctCharacterName.textContent = computerCharacter.name;
 computerCharacterImage.src = ('../assets/faces/' + computerCharacter.id + '.png');
 const javascriptReadableUserList = JSON.parse(localStorage.getItem(USER_LIST_KEY));
 const addRows = (javascriptReadableUserList) => {
+    // looks good! in the future, you'll want this to be a forEach loop
     for (let i = 0; i < javascriptReadableUserList.length; i++) {
         const player = javascriptReadableUserList[i];
         addRow(player);
@@ -27,8 +28,12 @@ let user = getUser();
 helloUser.textContent = user.name;
 
 userDisplayWinOrLose.textContent = getResults();
+
+// I feel like these should be at the top if possible, with all the other getElementsyIds
 const homeSubmitButton = document.getElementById('home');
 const aboutUsButton = document.getElementById('about-us');
+
+// these probably could have been <a> tags
 homeSubmitButton.addEventListener('click', () => {
     window.location = '../index.html';
 });

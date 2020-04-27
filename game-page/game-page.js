@@ -24,7 +24,7 @@ featureArray.forEach((item) => {
 const everyQuestionOption = document.querySelectorAll('.option');
 
 flipButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         btn.classList.add('overlay3');
     });
 });
@@ -46,6 +46,8 @@ everyQuestionOption.forEach((questionOption) => {
         } else questionFeedbackSpan.textContent = foundFeatureObject.noMessage;
     });
 });
+
+// nice logic for this complex piece of the game!
 userGuessSubmitButton.addEventListener('click', () => {
     guessAmountSpan.textContent = guessAmountRemaining;
     if (compareFace(userGuessText.value.toLowerCase(), computerCharacter.id)) {
